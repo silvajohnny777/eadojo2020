@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ec3702c2bd69a1e44307fb56a987fd32",
+    "revision": "8f656a976abd0ba4aef18764d0fe4af5",
     "url": "/eadojo2020/index.html"
   },
   {
-    "revision": "1fb1b2fe8f94295c3c93",
-    "url": "/eadojo2020/static/css/main.ae746f4e.chunk.css"
+    "revision": "a64b74dd0551128cc422",
+    "url": "/eadojo2020/static/css/main.7ab0d059.chunk.css"
   },
   {
     "revision": "1ee1ff78ae79ee428712",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/eadojo2020/static/js/2.8d5fe577.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "1fb1b2fe8f94295c3c93",
+    "revision": "a64b74dd0551128cc422",
     "url": "/eadojo2020/static/js/main.2050fffa.chunk.js"
   },
   {
