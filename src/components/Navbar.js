@@ -59,6 +59,12 @@ import { Link } from 'react-router-dom';
 
                             </Link>
 
+                            <a href="http://panel.ead.vairli.com/#/login" target="_blank" rel="noopener noreferrer" className="navbarLink login">
+
+                                Login
+
+                            </a>
+
                         </div>
 
                     </div>

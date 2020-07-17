@@ -77,7 +77,11 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPagePresentationDescription">
 
-                
+                                        <div className="mainPagePresentationButton">
+
+                                            Sign up
+
+                                        </div>
 
                                     </div>
 
