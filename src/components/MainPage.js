@@ -1,6 +1,12 @@
 import React from 'react'
 import PlatformPresentation from '../actionComponents/PlatformPresentation'
 
+import Stats from '../images/palmHands.gif'
+
+import OfferStats from '../images/offerStats.gif'
+import OfferCustomizable from '../images/offerCustomizable.gif'
+import OfferBusiness from '../images/business.svg'
+
     class MainPage extends React.Component {
 
         constructor() {
@@ -21,7 +27,24 @@ import PlatformPresentation from '../actionComponents/PlatformPresentation'
                         icon: 'https://img.icons8.com/nolan/64/000000/upload-to-cloud.png',
                         description: 'nice_text_here',
                     },
-                ]
+                ],
+                offers: [
+                    {
+                        image: OfferStats,
+                        title: 'Stats',
+                        description: 'nice_offer_description',
+                    },
+                    {
+                        image: OfferCustomizable,
+                        title: 'Customizable',
+                        description: 'nice_offer_description',
+                    },
+                    {
+                        image: OfferBusiness,
+                        title: 'Business',
+                        description: 'nice_offer_description',
+                    },
+                ],
             }
 
         }
@@ -54,7 +77,7 @@ import PlatformPresentation from '../actionComponents/PlatformPresentation'
 
                                     <div className="mainPagePresentationDescription">
 
-
+                
 
                                     </div>
 
@@ -124,11 +147,10 @@ import PlatformPresentation from '../actionComponents/PlatformPresentation'
 
                             <div className="mainPageThirdSectionRight">
 
-                                <div className="mainPageThirdSectionRightImage">
+                                <img className="mainPageThirdSectionRightImage" alt="phoneGif" src={Stats} />
 
                                     
 
-                                </div>
 
                             </div>
 
@@ -137,6 +159,110 @@ import PlatformPresentation from '../actionComponents/PlatformPresentation'
                     </div>
 
                     <PlatformPresentation />
+
+                    <div className="mainOffersContainer">
+
+                            {
+
+                                this.state.offers.map((offer, index) => {
+
+                                    return (
+
+                                        <div key={index} className="mainOffersContent">
+
+                                            {
+
+                                                index % 2 ? 
+
+                                                    <>
+                            
+                                                        <div className="mainOffersContentText">
+
+                                                            <div className="mainOfferTitle">
+                            
+                                                                {offer.title}
+
+                                                            </div>
+
+                                                            <div className="mainOfferDescription">
+
+                                                                {offer.description}
+
+                                                            </div>
+                            
+                                                        </div>
+
+                                                        <div className="mainOffersContentImage">
+                            
+                                                            <img alt="offer" className="mainOfferImageTag" src={offer.image} />
+                            
+                                                        </div>
+
+                                                    </>
+                                                
+                                                : 
+
+                                                    <>
+
+                                                        <div className="mainOffersContentImage">
+                            
+                                                            <img alt="offer" className="mainOfferImageTag" src={offer.image} />
+                            
+                                                        </div>
+                            
+                                                        <div className="mainOffersContentText">
+
+                                                            <div className="mainOfferTitle">
+                            
+                                                                {offer.title}
+
+                                                            </div>
+
+                                                            <div className="mainOfferDescription">
+
+                                                                {offer.description}
+
+                                                            </div>
+                            
+                                                        </div>
+
+                                                    </>
+
+                                            }
+
+                                        </div>
+
+                                    )
+
+                                })
+
+                            }
+
+                    </div>
+
+                    <div className="mainPageTalkWithUsContainer">
+
+                        <div className="mainPageTalkWithUsContent">
+
+                            <div className="mainPageTalkWithUs">
+
+                                contact@eadojo.com
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div className="mainPageFooterContainer">
+
+                        <div className="mainPageFooterContent">
+
+                            FOOTER
+
+                        </div>
+
+                    </div>
 
                 </>
 

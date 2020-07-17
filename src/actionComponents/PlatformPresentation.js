@@ -13,22 +13,27 @@ import React from 'react'
                     {
                         title: 'Students',
                         image: 'FEATURE_1',
+                        description: 'description_here',
                     },
                     {
                         title: 'Websites',
                         image: 'FEATURE_2',
+                        description: 'description_here',
                     },
                     {
                         title: 'Courses',
                         image: 'FEATURE_3',
+                        description: 'description_here',
                     },
                     {
                         title: 'Emails',
                         image: 'FEATURE_4',
+                        description: 'description_here',
                     },
                     {
                         title: 'Logs',
                         image: 'FEATURE_5',
+                        description: 'description_here',
                     },
                 ]
             }
@@ -78,9 +83,25 @@ import React from 'react'
 
                                     return (
 
-                                        <div key={index} className={this.state.activeId === index ? "featureBox active" : "featureBox"} onMouseEnter={() => this.changeImage(feature.image, index)}>
+                                        <div className="featureBoxContainer">
 
-                                            {feature.title}
+                                            <div key={index} className={this.state.activeId === index ? "featureBox active" : "featureBox"} onMouseEnter={() => this.changeImage(feature.image, index)}>
+
+                                                {feature.title}
+
+                                            </div>
+
+                                            {
+
+                                                this.state.activeId === index &&
+
+                                                    <div className="featureBoxDescription">
+                                                        
+                                                        {feature.description}
+
+                                                    </div>
+
+                                            }
 
                                         </div>
 
