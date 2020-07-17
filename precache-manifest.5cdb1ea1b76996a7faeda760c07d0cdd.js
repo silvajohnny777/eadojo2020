@@ -1,31 +1,47 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "8e35bf9f0cfe44e0af591a6af76c10e9",
+    "revision": "10e3472e75986d9fdab10bc1c4be4747",
     "url": "/eadojo2020/index.html"
   },
   {
-    "revision": "0f4747b49cf676059ebb",
-    "url": "/eadojo2020/static/css/main.d878bbec.chunk.css"
+    "revision": "3bc717401caf5fe6e24e",
+    "url": "/eadojo2020/static/css/main.e8d88d3c.chunk.css"
   },
   {
-    "revision": "1ee1ff78ae79ee428712",
-    "url": "/eadojo2020/static/js/2.8d5fe577.chunk.js"
+    "revision": "38d6ed6bc112fa4a6f5d",
+    "url": "/eadojo2020/static/js/2.27778c8e.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/eadojo2020/static/js/2.8d5fe577.chunk.js.LICENSE.txt"
+    "url": "/eadojo2020/static/js/2.27778c8e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "0f4747b49cf676059ebb",
-    "url": "/eadojo2020/static/js/main.2050fffa.chunk.js"
+    "revision": "3bc717401caf5fe6e24e",
+    "url": "/eadojo2020/static/js/main.681af8a6.chunk.js"
   },
   {
     "revision": "0954adf1ceaec25166c2",
     "url": "/eadojo2020/static/js/runtime-main.7f1b8ee2.js"
   },
   {
+    "revision": "07d255f9830d9bdba53748d0573670fc",
+    "url": "/eadojo2020/static/media/business.07d255f9.svg"
+  },
+  {
     "revision": "f6d082391977c01e614a1acce0533ad1",
     "url": "/eadojo2020/static/media/emptyCompany.f6d08239.jpeg"
+  },
+  {
+    "revision": "6f83a5d4f041c736480e0a29ee3b48a0",
+    "url": "/eadojo2020/static/media/offerCustomizable.6f83a5d4.gif"
+  },
+  {
+    "revision": "6e92bdd7222c568b7a7c8b9f2a17672e",
+    "url": "/eadojo2020/static/media/offerStats.6e92bdd7.gif"
+  },
+  {
+    "revision": "b5e8a91eca5a71d5ea40f0a9ce29172f",
+    "url": "/eadojo2020/static/media/palmHands.b5e8a91e.gif"
   },
   {
     "revision": "7649c35be35211efc4ec40b1e3c4d97a",

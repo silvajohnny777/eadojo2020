@@ -1,23 +1,27 @@
 {
   "files": {
-    "main.css": "/eadojo2020/static/css/main.d878bbec.chunk.css",
-    "main.js": "/eadojo2020/static/js/main.2050fffa.chunk.js",
-    "main.js.map": "/eadojo2020/static/js/main.2050fffa.chunk.js.map",
+    "main.css": "/eadojo2020/static/css/main.e8d88d3c.chunk.css",
+    "main.js": "/eadojo2020/static/js/main.681af8a6.chunk.js",
+    "main.js.map": "/eadojo2020/static/js/main.681af8a6.chunk.js.map",
     "runtime-main.js": "/eadojo2020/static/js/runtime-main.7f1b8ee2.js",
     "runtime-main.js.map": "/eadojo2020/static/js/runtime-main.7f1b8ee2.js.map",
-    "static/js/2.8d5fe577.chunk.js": "/eadojo2020/static/js/2.8d5fe577.chunk.js",
-    "static/js/2.8d5fe577.chunk.js.map": "/eadojo2020/static/js/2.8d5fe577.chunk.js.map",
+    "static/js/2.27778c8e.chunk.js": "/eadojo2020/static/js/2.27778c8e.chunk.js",
+    "static/js/2.27778c8e.chunk.js.map": "/eadojo2020/static/js/2.27778c8e.chunk.js.map",
     "index.html": "/eadojo2020/index.html",
-    "precache-manifest.2c9ff492df220a609b77de0355a52835.js": "/eadojo2020/precache-manifest.2c9ff492df220a609b77de0355a52835.js",
+    "precache-manifest.5cdb1ea1b76996a7faeda760c07d0cdd.js": "/eadojo2020/precache-manifest.5cdb1ea1b76996a7faeda760c07d0cdd.js",
     "service-worker.js": "/eadojo2020/service-worker.js",
-    "static/css/main.d878bbec.chunk.css.map": "/eadojo2020/static/css/main.d878bbec.chunk.css.map",
-    "static/js/2.8d5fe577.chunk.js.LICENSE.txt": "/eadojo2020/static/js/2.8d5fe577.chunk.js.LICENSE.txt",
-    "static/media/App.scss": "/eadojo2020/static/media/roboto-v20-latin-regular.8681f434.svg"
+    "static/css/main.e8d88d3c.chunk.css.map": "/eadojo2020/static/css/main.e8d88d3c.chunk.css.map",
+    "static/js/2.27778c8e.chunk.js.LICENSE.txt": "/eadojo2020/static/js/2.27778c8e.chunk.js.LICENSE.txt",
+    "static/media/business.svg": "/eadojo2020/static/media/business.07d255f9.svg",
+    "static/media/App.scss": "/eadojo2020/static/media/roboto-v20-latin-regular.8681f434.svg",
+    "static/media/offerCustomizable.gif": "/eadojo2020/static/media/offerCustomizable.6f83a5d4.gif",
+    "static/media/offerStats.gif": "/eadojo2020/static/media/offerStats.6e92bdd7.gif",
+    "static/media/palmHands.gif": "/eadojo2020/static/media/palmHands.b5e8a91e.gif"
   },
   "entrypoints": [
     "static/js/runtime-main.7f1b8ee2.js",
-    "static/js/2.8d5fe577.chunk.js",
-    "static/css/main.d878bbec.chunk.css",
-    "static/js/main.2050fffa.chunk.js"
+    "static/js/2.27778c8e.chunk.js",
+    "static/css/main.e8d88d3c.chunk.css",
+    "static/js/main.681af8a6.chunk.js"
   ]
 }
