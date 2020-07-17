@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/eadojo2020/static/css/main.70e25961.chunk.css",
-    "main.js": "/eadojo2020/static/js/main.a40102b6.chunk.js",
-    "main.js.map": "/eadojo2020/static/js/main.a40102b6.chunk.js.map",
+    "main.css": "/eadojo2020/static/css/main.249d23d6.chunk.css",
+    "main.js": "/eadojo2020/static/js/main.49c3b8a0.chunk.js",
+    "main.js.map": "/eadojo2020/static/js/main.49c3b8a0.chunk.js.map",
     "runtime-main.js": "/eadojo2020/static/js/runtime-main.7f1b8ee2.js",
     "runtime-main.js.map": "/eadojo2020/static/js/runtime-main.7f1b8ee2.js.map",
     "static/js/2.27778c8e.chunk.js": "/eadojo2020/static/js/2.27778c8e.chunk.js",
     "static/js/2.27778c8e.chunk.js.map": "/eadojo2020/static/js/2.27778c8e.chunk.js.map",
     "index.html": "/eadojo2020/index.html",
-    "precache-manifest.257b35494096545a05bf9ea04581eaa6.js": "/eadojo2020/precache-manifest.257b35494096545a05bf9ea04581eaa6.js",
+    "precache-manifest.1185f8f45530949844b4fd756b5d8f9e.js": "/eadojo2020/precache-manifest.1185f8f45530949844b4fd756b5d8f9e.js",
     "service-worker.js": "/eadojo2020/service-worker.js",
-    "static/css/main.70e25961.chunk.css.map": "/eadojo2020/static/css/main.70e25961.chunk.css.map",
+    "static/css/main.249d23d6.chunk.css.map": "/eadojo2020/static/css/main.249d23d6.chunk.css.map",
     "static/js/2.27778c8e.chunk.js.LICENSE.txt": "/eadojo2020/static/js/2.27778c8e.chunk.js.LICENSE.txt",
     "static/media/business.svg": "/eadojo2020/static/media/business.07d255f9.svg",
     "static/media/App.scss": "/eadojo2020/static/media/roboto-v20-latin-regular.8681f434.svg",
@@ -21,7 +21,7 @@
   "entrypoints": [
     "static/js/runtime-main.7f1b8ee2.js",
     "static/js/2.27778c8e.chunk.js",
-    "static/css/main.70e25961.chunk.css",
-    "static/js/main.a40102b6.chunk.js"
+    "static/css/main.249d23d6.chunk.css",
+    "static/js/main.49c3b8a0.chunk.js"
   ]
 }
