@@ -240,6 +240,50 @@ import OfferBusiness from '../images/business.svg'
 
                     </div>
 
+                    <div className="mainPageHelpActionContainer">
+
+                        <div className="mainPageHelpContent">
+
+                            <div className="mainPageHelpText">
+
+                                <div className="mainPageHelpTitle">
+
+                                    <i class="fas fa-comments"></i>
+
+                                    <div className="mainPageHelpTitleString">
+
+                                        Do you need help?
+
+                                    </div>
+
+                                </div>
+
+                                <hr className="mainPageTextBar" />
+
+                                <div className="mainPageTextDescription">
+
+                                    If you have any questions, our team can help you. Ask something!
+
+                                </div>
+
+                                <div className="mainPageTextButtonContainer">
+
+                                    <div className="mainPageTextButton">
+
+                                        Start chat
+                                        
+                                        <i class="fas iconButon fa-chevron-right"></i>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                     <div className="mainPageTalkWithUsContainer">
 
                         <div className="mainPageTalkWithUsContent">
