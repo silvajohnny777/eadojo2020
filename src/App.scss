@@ -17,525 +17,555 @@
   --platform-light-color: #7d728a;
 }
 
-.navbarContainer {
-  font-family: var(--platform-main-font);
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  height: 90px;
-  box-shadow: 0 2px 4px rgba(0,0,0,.06);
+@media screen and (min-width: 769px) {
 
-  .navbarContent {
+  .navbarContainer {
+    font-family: var(--platform-main-font);
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    max-width: 1000px;
-
-    .navbarContentHome {
-
-      .navbarHome {
-        font-size: 34px;
-        font-weight: bold;
-        color: var(--platform-main-color);
-        text-decoration: none;
-
-        .eadHightlight {
-          color: #909090;
-        }
-
-      }
-
-    }
-
-    .navbarContentLinks {
-      display: flex;
-      align-items: center;
-
-      .navbarLink {
-        font-size: 20px;
-        margin-left: 50px;
-        text-decoration: none;
-        transition: .4s ease;
-        color: black;
-        border-radius: 5px;
-        cursor: pointer;
-
-        &.login {
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          width: 120px;
-          height: 50px;
-          background-color: var(--platform-light-color);
-          color: #FFF;
-
-          &:hover {
-            background-color: var(--platform-main-color);
-            color: #FFF;
-          }
-
-        }
-
-        &:hover {
-          color: var(--platform-main-color);
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-.mainPageContainer {
-  font-family: var(--platform-main-font);
-  display: flex;
-  justify-content: center;
-  height: 700px;
-  background-image: url('./images/pexels-photo-3803219.jpeg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  .mainPageContent {
-    width: 95%;
-    max-width: 1000px;
-    display: flex;
-
-    .mainPageContentLeft {
-      width: 50%
-    }
-
-    .mainPageContentRight {
-      display: flex;
-      justify-content: center;
-      margin-top: 150px;
-      width: 50%;
-      height: 100%;
-
-      .mainPagePresentationTitle {
-        font-size: 60px;
-        color: white;
-        text-shadow: -5px 6px 10px #000000B3;
-      }
-
-      .mainPagePresentationDescription {
-
-        .mainPagePresentationButton {
-          width: 250px;
-          height: 50px;
-          background-color: var(--platform-light-color);
-          border-radius: 5px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-size: 20px;
-          color: #FFF;
-          transition: .4s ease;
-          cursor: pointer;
-          margin-top: 20px;
-
-          &:hover {
-            background-color: var(--platform-main-color);
-          }
-
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-.mainPageInformationBox {
-  font-family: var(--platform-main-font);
-  display: flex;
-  justify-content: center;
-  margin-top: -100px;
-
-  .mainPageInformationBoxContent {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #fff;
-    border-radius: 6px;
-    box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
-    color: #4a4a4a;
-    padding: 1.25rem;
-    width: 95%;
-    max-width: 1000px;
-    height: 150px;
-
-    .mainPageBoxInfo {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      transition: .4s ease;
-
-      .mainPageBoxInfoIcon {
-        margin-bottom: 15px;
-      }
-
-      .mainPageBoxInfoDescription {
-        color: #363636;
-        font-size: 2rem;
-        font-weight: 600;
-        line-height: 1.125;
-        font-size: 2rem;
-      }
-
-      &:hover {
-        margin-bottom: 10px;
-      }
-
-    }
-
-  }
-
-}
-
-.mainPageThirdSectionContainer {
-  font-family: var(--platform-main-font);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 800px;
-
-  .mainPageThirdSectionContent {
-    display: flex;
-    align-items: center;
+    justify-content: center;
     width: 100%;
-    height: 100%;
-    max-width: 1000px;
+    height: 90px;
+    box-shadow: 0 2px 4px rgba(0,0,0,.06);
 
-    .mainPageThirdSectionLeft {
-      width: 50%;
+    .navbarContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+      max-width: 1000px;
 
-      .mainPageThirdSectionLeftTitle {
+      .navbarContentHome {
+
+        .navbarHome {
+          font-size: 34px;
+          font-weight: bold;
+          color: var(--platform-main-color);
+          text-decoration: none;
+
+          .eadHightlight {
+            color: #909090;
+          }
+
+        }
+
+      }
+
+      .navbarContentLinks {
+        display: flex;
+        align-items: center;
+
+        .navbarLink {
+          font-size: 20px;
+          margin-left: 50px;
+          text-decoration: none;
+          transition: .4s ease;
+          color: black;
+          border-radius: 5px;
+          cursor: pointer;
+
+          &.login {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 120px;
+            height: 50px;
+            background-color: var(--platform-light-color);
+            color: #FFF;
+
+            &:hover {
+              background-color: var(--platform-main-color);
+              color: #FFF;
+            }
+
+          }
+
+          &:hover {
+            color: var(--platform-main-color);
+          }
+
+        }
+
+      }
+
+      .navbarMobileBread {
+        display: none;
+      }
+
+    }
+
+  }
+
+  .mainPageContainer {
+    font-family: var(--platform-main-font);
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    background-image: url('./images/pexels-photo-3803219.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .mainPageContent {
+      width: 95%;
+      max-width: 1000px;
+      display: flex;
+
+      .mainPageContentLeft {
+        width: 50%
+      }
+
+      .mainPageContentRight {
+        display: flex;
+        justify-content: center;
+        margin-top: 150px;
+        width: 50%;
+        height: 100%;
+
+        .mainPagePresentationTitle {
+          font-size: 60px;
+          color: white;
+          text-shadow: -5px 6px 10px #000000B3;
+        }
+
+        .mainPagePresentationDescription {
+
+          .mainPagePresentationButton {
+            width: 250px;
+            height: 50px;
+            background-color: var(--platform-light-color);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: #FFF;
+            transition: .4s ease;
+            cursor: pointer;
+            margin-top: 20px;
+
+            &:hover {
+              background-color: var(--platform-main-color);
+            }
+
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .mainPageInformationBox {
+    font-family: var(--platform-main-font);
+    display: flex;
+    justify-content: center;
+    margin-top: -100px;
+
+    .mainPageInformationBoxContent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      background-color: #fff;
+      border-radius: 6px;
+      box-shadow: 0 2px 3px rgba(10,10,10,.1), 0 0 0 1px rgba(10,10,10,.1);
+      color: #4a4a4a;
+      padding: 1.25rem;
+      width: 95%;
+      max-width: 1000px;
+      height: 150px;
+
+      .mainPageBoxInfo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: .4s ease;
+
+        .mainPageBoxInfoIcon {
+          margin-bottom: 15px;
+        }
+
+        .mainPageBoxInfoText {
+
+          .mainPageBoxInfoTitle {
+            color: #363636;
+            font-size: 2rem;
+            font-weight: 600;
+            line-height: 1.125;
+            font-size: 2rem;
+          }
+
+          .mainPageBoxInfoDescription {
+            display: none;
+          }
+
+          &:hover {
+            margin-bottom: 10px;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .mainPageThirdSectionContainer {
+    font-family: var(--platform-main-font);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+
+    .mainPageThirdSectionContent {
+      display: flex;
+      align-items: center;
+      width: 100%;
+      height: 100%;
+      max-width: 1000px;
+
+      .mainPageThirdSectionLeft {
+        width: 50%;
+
+        .mainPageThirdSectionLeftTitle {
+          color: #363636;
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 1.125;
+          margin-bottom: 10px;
+        }
+
+        .mainPageThirdSectionLefdescription {
+            font-size: 2rem;
+            color: #4a4a4a;
+            font-weight: 400;
+            line-height: 1.25;
+          }
+
+      }
+
+      .mainPageThirdSectionRight {
+        width: 50%;
+
+        .mainPageThirdSectionRightImage {
+          width: 100%;
+          height: 400px;
+          background-image: url('./images/placeholder-1920x1080.jpg');
+          background-position: center;
+          border-radius: 5px;
+        }
+
+      }
+
+    }
+
+  }
+
+  .platformPresentationContainer {
+    font-family: var(--platform-main-font);
+    display: flex;
+    justify-content: center;
+
+    .platformPresentationContent {
+      width: 95%;
+      max-width: 1000px;
+
+      .platformPresentationContentTitle {
         color: #363636;
         font-size: 3rem;
         font-weight: 600;
         line-height: 1.125;
         margin-bottom: 10px;
+        display: flex;
+        justify-content: center;
       }
 
-      .mainPageThirdSectionLefdescription {
+      .platformPresentationContentDescription {
+        font-size: 2rem;
+        color: #4a4a4a;
+        font-weight: 400;
+        line-height: 1.25;
+        display: flex;
+        justify-content: center;
+      }
+
+      .platformPresentationContentImageActive {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3rem;
+        font-weight: 600;
+        color: #FFF;
+        width: 100%;
+        height: 500px;
+        margin-top: 50px;
+        background-color: var(--platform-main-color);
+        border-radius: 5px;
+      }
+
+      .platformPresentationFeatureContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 170px;
+
+        .featureBoxContainer {
+
+          .featureBox {
+            width: 150px;
+            height: 100px;
+            background-color: #FFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            font-size: 18px;
+            border: 1px solid #999999;
+            border-radius: 5px;
+            transition: .4s ease;
+            cursor: pointer;
+
+            &.active {
+              background-color: var(--platform-main-color);
+              color: #FFF;
+              margin-bottom: 15px;
+            }
+
+            &:hover {
+              background-color: var(--platform-main-color);
+              color: #FFF;
+            }
+
+          }
+
+          .featureBoxDescription {
+            color: #666666;
+            text-align: center;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .companiesPageContainer {
+    font-family: var(--platform-main-font);
+    display: flex;
+    justify-content: center;
+    height: 700px;
+    background-image: url('./images/emptyCompany.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .companiesPageContent {
+      width: 95%;
+      max-width: 1000px;
+      display: flex;
+      flex-direction: column;
+      margin-top: 200px;
+
+      .companiesPageContentTitle {
+        font-size: 60px;
+        color: white;
+        text-shadow: -5px 6px 10px #000000B3;
+      }
+
+      .companiesPageContentDescription {
+        font-size: 30px;
+        color: white;
+        text-shadow: -5px 6px 10px #000000B3;
+      }
+
+    }
+
+  }
+
+  .mainOffersContainer {
+    font-family: var(--platform-main-font);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .mainOffersContent {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 95%;
+      max-width: 1000px;
+      height: 500px;
+
+      &.reverse {
+        flex-direction: row-reverse;
+      }
+      
+      .mainOffersContentImage {
+        width: 50%;
+
+        .mainOfferImageTag {
+          width: 100%;
+        }
+
+      }
+
+      .mainOffersContentText {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+
+        .mainOfferTitle {
+          color: #363636;
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 1.125;
+          margin-bottom: 10px;
+          color: var(--platform-main-color);
+        }
+
+        .mainOfferTextBar {
+          background-color: var(--platform-main-color);
+          border: none;
+          display: block;
+          height: 2px;
+          width: 100px;
+          margin: 1.5rem 0;
+        }
+
+        .mainOfferDescription {
           font-size: 2rem;
           color: #4a4a4a;
           font-weight: 400;
           line-height: 1.25;
         }
 
-    }
-
-    .mainPageThirdSectionRight {
-      width: 50%;
-
-      .mainPageThirdSectionRightImage {
-        width: 100%;
-        height: 400px;
-        background-image: url('./images/placeholder-1920x1080.jpg');
-        background-position: center;
-        border-radius: 5px;
       }
 
     }
 
   }
 
-}
-
-.platformPresentationContainer {
-  font-family: var(--platform-main-font);
-  display: flex;
-  justify-content: center;
-
-  .platformPresentationContent {
-    width: 95%;
-    max-width: 1000px;
-
-    .platformPresentationContentTitle {
-      color: #363636;
-      font-size: 3rem;
-      font-weight: 600;
-      line-height: 1.125;
-      margin-bottom: 10px;
-      display: flex;
-      justify-content: center;
-    }
-
-    .platformPresentationContentDescription {
-      font-size: 2rem;
-      color: #4a4a4a;
-      font-weight: 400;
-      line-height: 1.25;
-      display: flex;
-      justify-content: center;
-    }
-
-    .platformPresentationContentImageActive {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 3rem;
-      font-weight: 600;
-      color: #FFF;
-      width: 100%;
-      height: 500px;
-      margin-top: 50px;
-      background-color: var(--platform-main-color);
-      border-radius: 5px;
-    }
-
-    .platformPresentationFeatureContainer {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      height: 170px;
-
-      .featureBoxContainer {
-
-        .featureBox {
-          width: 150px;
-          height: 100px;
-          background-color: #FFF;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-weight: bold;
-          font-size: 18px;
-          border: 1px solid #999999;
-          border-radius: 5px;
-          transition: .4s ease;
-          cursor: pointer;
-
-          &.active {
-            background-color: var(--platform-main-color);
-            color: #FFF;
-            margin-bottom: 15px;
-          }
-
-          &:hover {
-            background-color: var(--platform-main-color);
-            color: #FFF;
-          }
-
-        }
-
-        .featureBoxDescription {
-          color: #666666;
-          text-align: center;
-        }
-
-      }
-
-    }
-
-  }
-
-}
-
-.companiesPageContainer {
-  font-family: var(--platform-main-font);
-  display: flex;
-  justify-content: center;
-  height: 700px;
-  background-image: url('./images/emptyCompany.jpeg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  .companiesPageContent {
-    width: 95%;
-    max-width: 1000px;
-    display: flex;
-    flex-direction: column;
-    margin-top: 200px;
-
-    .companiesPageContentTitle {
-      font-size: 60px;
-      color: white;
-      text-shadow: -5px 6px 10px #000000B3;
-    }
-
-    .companiesPageContentDescription {
-      font-size: 30px;
-      color: white;
-      text-shadow: -5px 6px 10px #000000B3;
-    }
-
-  }
-
-}
-
-.mainOffersContainer {
-  font-family: var(--platform-main-font);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  .mainOffersContent {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 95%;
-    max-width: 1000px;
-    height: 500px;
-    
-    .mainOffersContentImage {
-      width: 50%;
-
-      .mainOfferImageTag {
-        width: 100%;
-      }
-
-    }
-
-    .mainOffersContentText {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      width: 50%;
-
-      .mainOfferTitle {
-        color: #363636;
-        font-size: 3rem;
-        font-weight: 600;
-        line-height: 1.125;
-        margin-bottom: 10px;
-      }
-
-      .mainOfferDescription {
-        font-size: 2rem;
-        color: #4a4a4a;
-        font-weight: 400;
-        line-height: 1.25;
-      }
-
-    }
-
-  }
-
-}
-
-.mainPageTalkWithUsContainer {
-  font-family: var(--platform-main-font);
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-  height: 150px;
-
-  .mainPageTalkWithUsContent {
-    width: 100%;
-    height: 50px;
+  .mainPageTalkWithUsContainer {
+    font-family: var(--platform-main-font);
     display: flex;
     justify-content: center;
-    align-items: center;
-    background-color: var(--platform-main-color);
+    align-items: flex-end;
+    height: 150px;
 
-    .mainPageTalkWithUs {
+    .mainPageTalkWithUsContent {
+      width: 100%;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--platform-main-color);
+
+      .mainPageTalkWithUs {
+        width: 95%;
+        max-width: 1000px;
+        text-align: right;
+        font-size: 20px;
+        color: #FFF;
+      }
+
+    }
+
+  }
+
+  .mainPageFooterContainer {
+    font-family: var(--platform-main-font);
+    height: 200px;
+    background-color: #fafafa;
+    display: flex;
+    justify-content: center;
+
+    .mainPageFooterContent {
       width: 95%;
       max-width: 1000px;
-      text-align: right;
-      font-size: 20px;
-      color: #FFF;
     }
 
   }
 
-}
-
-.mainPageFooterContainer {
-  font-family: var(--platform-main-font);
-  height: 200px;
-  background-color: #fafafa;
-  display: flex;
-  justify-content: center;
-
-  .mainPageFooterContent {
-    width: 95%;
-    max-width: 1000px;
-  }
-
-}
-
-.mainPageHelpActionContainer {
-  font-family: var(--platform-main-font);
-  display: flex;
-  justify-content: center;
-
-  .mainPageHelpContent {
+  .mainPageHelpActionContainer {
+    font-family: var(--platform-main-font);
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 95%;
-    max-width: 1000px;
-    height: 500px;
 
-    .mainPageHelpText {
+    .mainPageHelpContent {
       display: flex;
-      flex-direction: column;
+      justify-content: center;
       align-items: center;
-      width: 500px;
+      width: 95%;
+      max-width: 1000px;
+      height: 500px;
 
-      .mainPageHelpTitle {
+      .mainPageHelpText {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        color: #363636;
-        font-size: 3rem;
-        font-weight: 600;
-        line-height: 1.125;
-        margin-bottom: 10px;
+        width: 500px;
 
-        .mainPageHelpTitleString {
-          margin-left: 10px;
-        }
-
-      }
-
-      .mainPageTextBar {
-        background-color: #f5f5f5;
-        border: none;
-        display: block;
-        height: 2px;
-        width: 100%;
-        margin: 1.5rem 0;
-      }
-
-      .mainPageTextDescription {
-        color: #4a4a4a;
-        font-weight: 400;
-        line-height: 1.25;
-        text-align: center;
-        font-size: 1.5rem;
-      }
-
-      .mainPageTextButtonContainer {
-        margin-top: 30px;
-
-        .mainPageTextButton {
-          width: 250px;
-          height: 50px;
-          background-color: var(--platform-light-color);
-          border-radius: 5px;
+        .mainPageHelpTitle {
           display: flex;
-          justify-content: center;
           align-items: center;
-          font-size: 20px;
-          color: #FFF;
-          transition: .4s ease;
-          cursor: pointer;
+          color: #363636;
+          font-size: 3rem;
+          font-weight: 600;
+          line-height: 1.125;
+          margin-bottom: 10px;
 
-          .iconButon {
+          .mainPageHelpTitleString {
             margin-left: 10px;
           }
-          
-          &:hover {
-            background-color: var(--platform-main-color);
+
+        }
+
+        .mainPageTextBar {
+          background-color: #f5f5f5;
+          border: none;
+          display: block;
+          height: 2px;
+          width: 100%;
+          margin: 1.5rem 0;
+        }
+
+        .mainPageTextDescription {
+          color: #4a4a4a;
+          font-weight: 400;
+          line-height: 1.25;
+          text-align: center;
+          font-size: 1.5rem;
+        }
+
+        .mainPageTextButtonContainer {
+          margin-top: 30px;
+
+          .mainPageTextButton {
+            width: 250px;
+            height: 50px;
+            background-color: var(--platform-light-color);
+            border-radius: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            color: #FFF;
+            transition: .4s ease;
+            cursor: pointer;
+
+            .iconButon {
+              margin-left: 10px;
+            }
+            
+            &:hover {
+              background-color: var(--platform-main-color);
+            }
+
           }
 
         }

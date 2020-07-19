@@ -67,6 +67,12 @@ import { Link } from 'react-router-dom';
 
                         </div>
 
+                        <div className="navbarMobileBread">
+
+                            B
+
+                        </div>
+
                     </div>
 
                 </div>

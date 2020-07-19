@@ -17,15 +17,18 @@ import OfferBusiness from '../images/business.svg'
                 items: [
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/certificate.png',
-                        description: 'nice_text_here',
+                        title: 'nice_text_here',
+                        description: 'short_mobile_description_here',
                     },
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/edit-property.png',
-                        description: 'nice_text_here',
+                        title: 'nice_text_here',
+                        description: 'short_mobile_description_here',
                     },
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/upload-to-cloud.png',
-                        description: 'nice_text_here',
+                        title: 'nice_text_here',
+                        description: 'short_mobile_description_here',
                     },
                 ],
                 offers: [
@@ -45,6 +48,9 @@ import OfferBusiness from '../images/business.svg'
                         description: 'nice_offer_description',
                     },
                 ],
+                text: {
+                    'TEXT_CREATE_COURSES_FOR_FREE': 'Create online courses for free'
+                }
             }
 
         }
@@ -71,7 +77,7 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPagePresentationTitle">
 
-                                        Create online courses for free
+                                        {this.state.text.TEXT_CREATE_COURSES_FOR_FREE}
 
                                     </div>
 
@@ -111,9 +117,19 @@ import OfferBusiness from '../images/business.svg'
 
                                             </div>
 
-                                            <div className="mainPageBoxInfoDescription">
+                                            <div className="mainPageBoxInfoText">
 
-                                                {item.description}
+                                                <div className="mainPageBoxInfoTitle">
+
+                                                    {item.title}
+
+                                                </div>
+
+                                                <div className="mainPageBoxInfoDescription">
+
+                                                    {item.description}
+
+                                                </div>
 
                                             </div>
 
@@ -172,67 +188,31 @@ import OfferBusiness from '../images/business.svg'
 
                                     return (
 
-                                        <div key={index} className="mainOffersContent">
-
-                                            {
-
-                                                index % 2 ? 
-
-                                                    <>
+                                        <div key={index} className={index % 2 ? "mainOffersContent reverse" : "mainOffersContent"}>
                             
-                                                        <div className="mainOffersContentText">
+                                            <div className="mainOffersContentText">
 
-                                                            <div className="mainOfferTitle">
-                            
-                                                                {offer.title}
+                                                <div className="mainOfferTitle">
+                
+                                                    {offer.title}
 
-                                                            </div>
+                                                </div>
 
-                                                            <div className="mainOfferDescription">
+                                                <div className="mainOfferTextBar" />
 
-                                                                {offer.description}
+                                                <div className="mainOfferDescription">
 
-                                                            </div>
-                            
-                                                        </div>
+                                                    {offer.description}
 
-                                                        <div className="mainOffersContentImage">
-                            
-                                                            <img alt="offer" className="mainOfferImageTag" src={offer.image} />
-                            
-                                                        </div>
+                                                </div>
+                
+                                            </div>
 
-                                                    </>
-                                                
-                                                : 
-
-                                                    <>
-
-                                                        <div className="mainOffersContentImage">
-                            
-                                                            <img alt="offer" className="mainOfferImageTag" src={offer.image} />
-                            
-                                                        </div>
-                            
-                                                        <div className="mainOffersContentText">
-
-                                                            <div className="mainOfferTitle">
-                            
-                                                                {offer.title}
-
-                                                            </div>
-
-                                                            <div className="mainOfferDescription">
-
-                                                                {offer.description}
-
-                                                            </div>
-                            
-                                                        </div>
-
-                                                    </>
-
-                                            }
+                                            <div className="mainOffersContentImage">
+                
+                                                <img alt="offer" className="mainOfferImageTag" src={offer.image} />
+                
+                                            </div>
 
                                         </div>
 
@@ -252,7 +232,7 @@ import OfferBusiness from '../images/business.svg'
 
                                 <div className="mainPageHelpTitle">
 
-                                    <i class="fas fa-comments"></i>
+                                    <i className="fas fa-comments"></i>
 
                                     <div className="mainPageHelpTitleString">
 
@@ -276,7 +256,7 @@ import OfferBusiness from '../images/business.svg'
 
                                         Start chat
                                         
-                                        <i class="fas iconButon fa-chevron-right"></i>
+                                        <i className="fas iconButon fa-chevron-right"></i>
 
                                     </div>
 

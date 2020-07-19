@@ -83,9 +83,9 @@ import React from 'react'
 
                                     return (
 
-                                        <div className="featureBoxContainer">
+                                        <div key={index} className="featureBoxContainer">
 
-                                            <div key={index} className={this.state.activeId === index ? "featureBox active" : "featureBox"} onMouseEnter={() => this.changeImage(feature.image, index)}>
+                                            <div className={this.state.activeId === index ? "featureBox active" : "featureBox"} onMouseEnter={() => this.changeImage(feature.image, index)}>
 
                                                 {feature.title}
 
