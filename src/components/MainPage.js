@@ -17,18 +17,18 @@ import OfferBusiness from '../images/business.svg'
                 items: [
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/certificate.png',
-                        title: 'nice_text_here',
-                        description: 'short_mobile_description_here',
+                        title: 'text_here',
+                        description: 'mobile_description',
                     },
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/edit-property.png',
-                        title: 'nice_text_here',
-                        description: 'short_mobile_description_here',
+                        title: 'text_here',
+                        description: 'mobile_description',
                     },
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/upload-to-cloud.png',
-                        title: 'nice_text_here',
-                        description: 'short_mobile_description_here',
+                        title: 'text_here',
+                        description: 'mobile_description',
                     },
                 ],
                 offers: [
