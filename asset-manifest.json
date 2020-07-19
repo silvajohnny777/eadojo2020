@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/eadojo2020/static/css/main.3b73e9f2.chunk.css",
+    "main.css": "/eadojo2020/static/css/main.2098ed8a.chunk.css",
     "main.js": "/eadojo2020/static/js/main.f9dc8f61.chunk.js",
     "main.js.map": "/eadojo2020/static/js/main.f9dc8f61.chunk.js.map",
     "runtime-main.js": "/eadojo2020/static/js/runtime-main.7f1b8ee2.js",
@@ -8,9 +8,9 @@
     "static/js/2.655875ce.chunk.js": "/eadojo2020/static/js/2.655875ce.chunk.js",
     "static/js/2.655875ce.chunk.js.map": "/eadojo2020/static/js/2.655875ce.chunk.js.map",
     "index.html": "/eadojo2020/index.html",
-    "precache-manifest.866489f209ce798b8e8283e9468ee1d7.js": "/eadojo2020/precache-manifest.866489f209ce798b8e8283e9468ee1d7.js",
+    "precache-manifest.b770d18dde7f342fd4a9146e21fd0faf.js": "/eadojo2020/precache-manifest.b770d18dde7f342fd4a9146e21fd0faf.js",
     "service-worker.js": "/eadojo2020/service-worker.js",
-    "static/css/main.3b73e9f2.chunk.css.map": "/eadojo2020/static/css/main.3b73e9f2.chunk.css.map",
+    "static/css/main.2098ed8a.chunk.css.map": "/eadojo2020/static/css/main.2098ed8a.chunk.css.map",
     "static/js/2.655875ce.chunk.js.LICENSE.txt": "/eadojo2020/static/js/2.655875ce.chunk.js.LICENSE.txt",
     "static/media/business.svg": "/eadojo2020/static/media/business.07d255f9.svg",
     "static/media/App.scss": "/eadojo2020/static/media/roboto-v20-latin-regular.8681f434.svg",
@@ -22,7 +22,7 @@
   "entrypoints": [
     "static/js/runtime-main.7f1b8ee2.js",
     "static/js/2.655875ce.chunk.js",
-    "static/css/main.3b73e9f2.chunk.css",
+    "static/css/main.2098ed8a.chunk.css",
     "static/js/main.f9dc8f61.chunk.js"
   ]
 }
