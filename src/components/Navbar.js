@@ -8,10 +8,16 @@ import { Link } from 'react-router-dom';
             super()
 
             this.state = {
-
-
-
+                languages: []
             }
+
+        }
+
+        componentWillMount() {
+
+            this.setState({
+                languages: this.props.language
+            })
 
         }
 
@@ -29,11 +35,11 @@ import { Link } from 'react-router-dom';
 
                                 <span className="eadHightlight">
 
-                                    ead
+                                    {this.state.languages.PLATFORM_NAME.toLowerCase().substring(0, 3)}
 
                                 </span>
 
-                                ojo
+                                {this.state.languages.PLATFORM_NAME.substring(3)}
 
                             </Link>                            
 
@@ -43,25 +49,25 @@ import { Link } from 'react-router-dom';
 
                             <Link to="/companies" className="navbarLink">
 
-                                companies
+                                {this.state.languages.WEBSITE_TEXT_COMPANIES}
 
                             </Link>
 
                             <Link to="/colleges" className="navbarLink">
 
-                                colleges
+                                {this.state.languages.WEBSITE_TEXT_COLLEGES}
 
                             </Link>
 
                             <Link to="/teachers" className="navbarLink">
 
-                                teachers
+                                {this.state.languages.WEBSITE_TEXT_TEACHERS}
 
                             </Link>
 
                             <a href="http://panel.ead.vairli.com/#/login" target="_blank" rel="noopener noreferrer" className="navbarLink login">
 
-                                Login
+                                {this.state.languages.TEXT_AUTH_LOGIN}
 
                             </a>
 

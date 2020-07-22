@@ -200,10 +200,10 @@
             display: none;
           }
 
-          &:hover {
-            margin-bottom: 10px;
-          }
+        }
 
+        &:hover {
+          margin-bottom: 10px;
         }
 
       }
@@ -309,7 +309,7 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 170px;
+        height: 200px;
 
         .featureBoxContainer {
 
@@ -347,39 +347,6 @@
 
         }
 
-      }
-
-    }
-
-  }
-
-  .companiesPageContainer {
-    font-family: var(--platform-main-font);
-    display: flex;
-    justify-content: center;
-    height: 700px;
-    background-image: url('./images/emptyCompany.jpeg');
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-
-    .companiesPageContent {
-      width: 95%;
-      max-width: 1000px;
-      display: flex;
-      flex-direction: column;
-      margin-top: 200px;
-
-      .companiesPageContentTitle {
-        font-size: 60px;
-        color: white;
-        text-shadow: -5px 6px 10px #000000B3;
-      }
-
-      .companiesPageContentDescription {
-        font-size: 30px;
-        color: white;
-        text-shadow: -5px 6px 10px #000000B3;
       }
 
     }
@@ -572,6 +539,47 @@
 
       }
 
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+
+
+.companiesPageContainer {
+  font-family: var(--platform-main-font);
+  display: flex;
+  justify-content: center;
+  height: 700px;
+  background-image: url('./images/emptyCompany.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  .companiesPageContent {
+    width: 95%;
+    max-width: 1000px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 200px;
+
+    .companiesPageContentTitle {
+      font-size: 60px;
+      color: white;
+      text-shadow: -5px 6px 10px #000000B3;
+    }
+
+    .companiesPageContentDescription {
+      font-size: 30px;
+      color: white;
+      text-shadow: -5px 6px 10px #000000B3;
     }
 
   }

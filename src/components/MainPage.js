@@ -14,44 +14,53 @@ import OfferBusiness from '../images/business.svg'
             super()
 
             this.state = {
+                language: [],
+                items: [
+                ],
+                offers: [],
+            }
+
+        }
+
+        componentWillMount() {
+
+            this.setState({
+                language: this.props.language,
                 items: [
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/certificate.png',
-                        title: 'text_here',
+                        title: this.props.language.WEBSITE_TEXT_CERTIFICATE,
                         description: 'mobile_description',
                     },
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/edit-property.png',
-                        title: 'text_here',
+                        title: this.props.language.WEBSITE_TEXT_CUSTOMIZABLE,
                         description: 'mobile_description',
                     },
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/upload-to-cloud.png',
-                        title: 'text_here',
+                        title: this.props.language.WEBSITE_TEXT_CLOUD,
                         description: 'mobile_description',
                     },
                 ],
                 offers: [
                     {
                         image: OfferStats,
-                        title: 'Stats',
-                        description: 'nice_offer_description',
+                        title: this.props.language.WEBSITE_TEXT_STATS,
+                        description: this.props.language.WEBSITE_TEXT_STATS_DESCRIPTION,
                     },
                     {
                         image: OfferCustomizable,
-                        title: 'Customizable',
-                        description: 'nice_offer_description',
+                        title: this.props.language.WEBSITE_TEXT_CUSTOMIZABLE,
+                        description: this.props.language.WEBSITE_TEXT_CUSTOMIZABLE_DESCRIPTION,
                     },
                     {
                         image: OfferBusiness,
-                        title: 'Business',
-                        description: 'nice_offer_description',
+                        title: this.props.language.WEBSITE_TEXT_BUSINESS,
+                        description: this.props.language.WEBSITE_TEXT_BUSINESS_DESCRIPTION,
                     },
                 ],
-                text: {
-                    'TEXT_CREATE_COURSES_FOR_FREE': 'Create online courses for free'
-                }
-            }
+            })
 
         }
 
@@ -77,7 +86,7 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPagePresentationTitle">
 
-                                        {this.state.text.TEXT_CREATE_COURSES_FOR_FREE}
+                                        {this.state.language.WEBSITE_TEXT_CREATE_ONLINE_COURSES}
 
                                     </div>
 
@@ -85,7 +94,7 @@ import OfferBusiness from '../images/business.svg'
 
                                         <div className="mainPagePresentationButton">
 
-                                            Sign up
+                                            {this.state.language.TEXT_SIGNUP}
 
                                         </div>
 
@@ -153,13 +162,13 @@ import OfferBusiness from '../images/business.svg'
 
                                 <div className="mainPageThirdSectionLeftTitle">
 
-                                    Everything you need
+                                    {this.state.language.WEBSITE_TEXT_SECTION_TWO}
 
                                 </div>
 
                                 <div className="mainPageThirdSectionLefdescription">
 
-                                    On the palm of your hand
+                                    {this.state.language.WEBSITE_TEXT_DESCRIPTION_SECTION_TWO}
 
                                 </div>
 
@@ -178,7 +187,7 @@ import OfferBusiness from '../images/business.svg'
 
                     </div>
 
-                    <PlatformPresentation />
+                    <PlatformPresentation language={this.state.language} />
 
                     <div className="mainOffersContainer">
 
@@ -236,7 +245,7 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPageHelpTitleString">
 
-                                        Do you need help?
+                                        {this.state.language.WEBSITE_TEXT_NEED_HELP}
 
                                     </div>
 
@@ -246,7 +255,7 @@ import OfferBusiness from '../images/business.svg'
 
                                 <div className="mainPageTextDescription">
 
-                                    If you have any questions, our team can help you. Ask something!
+                                    {this.state.language.WEBSITE_TEXT_NEED_HELP_DESCRIPTION}
 
                                 </div>
 
@@ -254,7 +263,7 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPageTextButton">
 
-                                        Start chat
+                                        {this.state.language.WEBSITE_TEXT_NEED_HELP}
                                         
                                         <i className="fas iconButon fa-chevron-right"></i>
 
@@ -274,7 +283,7 @@ import OfferBusiness from '../images/business.svg'
 
                             <div className="mainPageTalkWithUs">
 
-                                contact@eadojo.com
+                                {this.state.language.WEBSITE_TEXT_EMAIL}
 
                             </div>
 

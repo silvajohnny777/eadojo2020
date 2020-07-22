@@ -8,35 +8,45 @@ import React from 'react'
 
             this.state = {
                 activeId: 0,
-                activeImage: 'FEATURE_1',
+                languages: [],
+                features: []
+            }
+
+        }
+
+        componentWillMount() {
+
+            this.setState({
+                language: this.props.language,
+                activeImage: this.props.language.WEBSITE_TEXT_FEATURE_ONE_IMAGE,
                 features: [
                     {
-                        title: 'Students',
-                        image: 'FEATURE_1',
-                        description: 'description_here',
+                        title: this.props.language.WEBSITE_TEXT_FEATURE_ONE,
+                        image: this.props.language.WEBSITE_TEXT_FEATURE_ONE_IMAGE,
+                        description: this.props.language.WEBSITE_TEXT_FEATURE_ONE_DESCRIPTION,
                     },
                     {
-                        title: 'Websites',
-                        image: 'FEATURE_2',
-                        description: 'description_here',
+                        title: this.props.language.WEBSITE_TEXT_FEATURE_TWO,
+                        image: this.props.language.WEBSITE_TEXT_FEATURE_TWO_IMAGE,
+                        description: this.props.language.WEBSITE_TEXT_FEATURE_TWO_DESCRIPTION,
                     },
                     {
-                        title: 'Courses',
-                        image: 'FEATURE_3',
-                        description: 'description_here',
+                        title: this.props.language.WEBSITE_TEXT_FEATURE_THREE,
+                        image: this.props.language.WEBSITE_TEXT_FEATURE_THREE_IMAGE,
+                        description: this.props.language.WEBSITE_TEXT_FEATURE_THREE_DESCRIPTION,
                     },
                     {
-                        title: 'Emails',
-                        image: 'FEATURE_4',
-                        description: 'description_here',
+                        title: this.props.language.WEBSITE_TEXT_FEATURE_FOUR,
+                        image: this.props.language.WEBSITE_TEXT_FEATURE_FOUR_IMAGE,
+                        description: this.props.language.WEBSITE_TEXT_FEATURE_FOUR_DESCRIPTION,
                     },
                     {
-                        title: 'Logs',
-                        image: 'FEATURE_5',
-                        description: 'description_here',
+                        title: this.props.language.WEBSITE_TEXT_FEATURE_FIVE,
+                        image: this.props.language.WEBSITE_TEXT_FEATURE_FIVE_IMAGE,
+                        description: this.props.language.WEBSITE_TEXT_FEATURE_FIVE_DESCRIPTION,
                     },
                 ]
-            }
+            })
 
         }
 
@@ -59,13 +69,13 @@ import React from 'react'
 
                         <div className="platformPresentationContentTitle">
 
-                            A powerful and flexible platform
+                            {this.state.language.WEBSITE_TEXT_SECTION_THREE}
 
                         </div>
 
                         <div className="platformPresentationContentDescription">
 
-                            Different than everything you have seen before
+                            {this.state.language.WEBSITE_TEXT_DESCRIPTION_SECTION_THREE}
 
                         </div>
 
