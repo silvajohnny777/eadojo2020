@@ -36,7 +36,7 @@ class App extends React.Component {
 
   componentDidMount() {
             
-    fetch('http://server.ead.vairli.com/public/api/helpers/languages/'+this.state.userLanguage)
+    fetch('https://server.ead.vairli.com/public/api/helpers/languages/'+this.state.userLanguage)
         .then(response => response.json())
             .then(data =>
               this.setState({

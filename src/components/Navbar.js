@@ -35,11 +35,11 @@ import { Link } from 'react-router-dom';
 
                                 <span className="eadHightlight">
 
-                                    {this.state.languages.PLATFORM_NAME.toLowerCase().substring(0, 3)}
+                                    {this.state.languages.PLATFORM_NAME}
 
                                 </span>
 
-                                {this.state.languages.PLATFORM_NAME.substring(3)}
+                                {this.state.languages.PLATFORM_NAME}
 
                             </Link>                            
 
