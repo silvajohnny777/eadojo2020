@@ -1,5 +1,9 @@
 @media screen and (max-width:768px) {
 
+    .popUpCookieContainer {
+      display: none;
+    }
+
     .navbarContainer {
       font-family: var(--platform-main-font);
       display: flex;

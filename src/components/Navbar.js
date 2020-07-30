@@ -31,15 +31,15 @@ import { Link } from 'react-router-dom';
 
                         <div className="navbarContentHome">
 
-                            <Link to="/" className="navbarHome">
+                            <Link to={"/"+this.props.languageId} className="navbarHome">
 
                                 <span className="eadHightlight">
 
-                                    {this.state.languages.PLATFORM_NAME}
+                                    {this.state.languages.PLATFORM_NAME.toLowerCase().substring(0, 3)}
 
                                 </span>
 
-                                {this.state.languages.PLATFORM_NAME}
+                                {this.state.languages.PLATFORM_NAME.substring(3)}
 
                             </Link>                            
 
@@ -47,19 +47,19 @@ import { Link } from 'react-router-dom';
 
                         <div className="navbarContentLinks">
 
-                            <Link to="/companies" className="navbarLink">
+                            <Link to={`${this.props.languageId}/companies`} className="navbarLink">
 
                                 {this.state.languages.WEBSITE_TEXT_COMPANIES}
 
                             </Link>
 
-                            <Link to="/colleges" className="navbarLink">
+                            <Link to={`${this.props.languageId}/colleges`} className="navbarLink">
 
                                 {this.state.languages.WEBSITE_TEXT_COLLEGES}
 
                             </Link>
 
-                            <Link to="/teachers" className="navbarLink">
+                            <Link to={`${this.props.languageId}/teachers`} className="navbarLink">
 
                                 {this.state.languages.WEBSITE_TEXT_TEACHERS}
 

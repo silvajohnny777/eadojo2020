@@ -19,6 +19,60 @@
 
 @media screen and (min-width: 769px) {
 
+  .popUpCookieContainer {
+    font-family: var(--platform-main-font);
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    position: fixed;
+    width: 100%;
+    bottom: 30px;
+
+    .popUpCookieContent {
+      width: 90%;
+      display: flex;
+      align-items: center;
+      box-shadow: 0 4px 5px rgba(25,67,81,.1);
+      border-radius: 30px;
+      padding: 20px;
+      background-color: #FFF;
+      justify-content: space-between;
+      border: 1px solid var(--platform-main-color);
+
+      .popUpCookieContentInformation {
+        display: flex;
+        align-items: center;
+
+        .popUpCookieTag {
+          width: 40px;
+          height: 40px;
+          margin-right: 20px;
+        }
+      
+      }
+
+      .popUpCookieButton {
+        width: 80px;
+        height: 40px;
+        background-color: var(--platform-light-color);
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #FFF;
+        transition: .4s ease;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--platform-main-color);
+        }
+
+      }
+    
+    }
+
+  }
+
   .navbarContainer {
     font-family: var(--platform-main-font);
     display: flex;
