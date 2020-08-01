@@ -47,19 +47,19 @@ import { Link } from 'react-router-dom';
 
                         <div className="navbarContentLinks">
 
-                            <Link to={`${this.props.languageId}/companies`} className="navbarLink">
+                            <Link to={`/:${this.props.languageId}/companies`} className="navbarLink">
 
                                 {this.state.languages.WEBSITE_TEXT_COMPANIES}
 
                             </Link>
 
-                            <Link to={`${this.props.languageId}/colleges`} className="navbarLink">
+                            <Link to={`/:${this.props.languageId}/colleges`} className="navbarLink">
 
                                 {this.state.languages.WEBSITE_TEXT_COLLEGES}
 
                             </Link>
 
-                            <Link to={`${this.props.languageId}/teachers`} className="navbarLink">
+                            <Link to={`/:${this.props.languageId}/teachers`} className="navbarLink">
 
                                 {this.state.languages.WEBSITE_TEXT_TEACHERS}
 

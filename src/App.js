@@ -30,12 +30,16 @@ class App extends React.Component {
 
   componentWillMount() {
 
-    var url = window.location.href.split("/")
-    var lang = url[url.length - 1]
+    const str = window.location.href;
 
+    var mySubString = str.substring(
+      str.lastIndexOf(":") + 1, 
+      str.lastIndexOf("/")
+    );
+  
     this.setState({
       loading: true,
-      userLanguage: lang,
+      userLanguage: mySubString,
     })
 
   }
@@ -102,8 +106,8 @@ class App extends React.Component {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Navbar language={this.state.languages} languageId={this.state.userLanguage} />
           <Switch>
-            <Route path={"/"+this.state.userLanguage} render={() => <MainPage language={this.state.languages} />} exact />
-            <Route path={"/"+ this.state.userLanguage +"/companies"} render={() => <Companies language={this.state.languages} />} />
+            <Route path={"/:"+this.state.userLanguage} render={() => <MainPage language={this.state.languages} />} exact />
+            <Route path={"/:"+ this.state.userLanguage +"/companies"} render={() => <Companies language={this.state.languages} />} />
             <Route render={() => <PageNotFound language={this.state.languages} />} />
           </Switch>
         </BrowserRouter>
