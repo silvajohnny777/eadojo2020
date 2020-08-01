@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/eadojo2020/static/css/main.a59ac393.chunk.css",
-    "main.js": "/eadojo2020/static/js/main.b602564b.chunk.js",
-    "main.js.map": "/eadojo2020/static/js/main.b602564b.chunk.js.map",
+    "main.css": "/eadojo2020/static/css/main.f241a231.chunk.css",
+    "main.js": "/eadojo2020/static/js/main.e0d7fe01.chunk.js",
+    "main.js.map": "/eadojo2020/static/js/main.e0d7fe01.chunk.js.map",
     "runtime-main.js": "/eadojo2020/static/js/runtime-main.3f83abdf.js",
     "runtime-main.js.map": "/eadojo2020/static/js/runtime-main.3f83abdf.js.map",
-    "static/js/2.a20a5d75.chunk.js": "/eadojo2020/static/js/2.a20a5d75.chunk.js",
-    "static/js/2.a20a5d75.chunk.js.map": "/eadojo2020/static/js/2.a20a5d75.chunk.js.map",
+    "static/js/2.1ecc077b.chunk.js": "/eadojo2020/static/js/2.1ecc077b.chunk.js",
+    "static/js/2.1ecc077b.chunk.js.map": "/eadojo2020/static/js/2.1ecc077b.chunk.js.map",
     "index.html": "/eadojo2020/index.html",
-    "precache-manifest.f1ca2ea79a42883ead7ba2ca80e34fbe.js": "/eadojo2020/precache-manifest.f1ca2ea79a42883ead7ba2ca80e34fbe.js",
+    "precache-manifest.79d85ce492ae0b83815882500396f12a.js": "/eadojo2020/precache-manifest.79d85ce492ae0b83815882500396f12a.js",
     "service-worker.js": "/eadojo2020/service-worker.js",
-    "static/css/main.a59ac393.chunk.css.map": "/eadojo2020/static/css/main.a59ac393.chunk.css.map",
-    "static/js/2.a20a5d75.chunk.js.LICENSE.txt": "/eadojo2020/static/js/2.a20a5d75.chunk.js.LICENSE.txt",
+    "static/css/main.f241a231.chunk.css.map": "/eadojo2020/static/css/main.f241a231.chunk.css.map",
+    "static/js/2.1ecc077b.chunk.js.LICENSE.txt": "/eadojo2020/static/js/2.1ecc077b.chunk.js.LICENSE.txt",
     "static/media/business.svg": "/eadojo2020/static/media/business.07d255f9.svg",
+    "static/media/cookie.svg": "/eadojo2020/static/media/cookie.a4c4c666.svg",
     "static/media/App.scss": "/eadojo2020/static/media/roboto-v20-latin-regular.60fa3c06.woff",
     "static/media/loader.svg": "/eadojo2020/static/media/loader.d5c88056.svg",
     "static/media/offerCustomizable.gif": "/eadojo2020/static/media/offerCustomizable.6f83a5d4.gif",
@@ -22,8 +23,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.3f83abdf.js",
-    "static/js/2.a20a5d75.chunk.js",
-    "static/css/main.a59ac393.chunk.css",
-    "static/js/main.b602564b.chunk.js"
+    "static/js/2.1ecc077b.chunk.js",
+    "static/css/main.f241a231.chunk.css",
+    "static/js/main.e0d7fe01.chunk.js"
   ]
 }
