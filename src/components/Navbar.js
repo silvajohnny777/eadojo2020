@@ -1,6 +1,74 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 
+    const Navbar = () => {
+
+        return (
+
+                <div className="navbarContainer">
+
+                    <div className="navbarContent">
+
+                        <div className="navbarContentHome">
+
+                            <Link to={"/en/home"} className="navbarHome">
+
+                                <span className="eadHightlight">
+
+                                    ead
+
+                                </span>
+
+                                ojo
+
+                            </Link>                            
+
+                        </div>
+
+                        <div className="navbarContentLinks">
+
+                            <Link to={`/en/companies`} className="navbarLink">
+
+                                Companies
+
+                            </Link>
+
+                            <Link to={`/en/colleges`} className="navbarLink">
+
+                                Colleges
+
+                            </Link>
+
+                            <Link to={`/en/teachers`} className="navbarLink">
+
+                                Teachers
+
+                            </Link>
+
+                            <a href="http://panel.ead.vairli.com/#/login" target="_blank" rel="noopener noreferrer" className="navbarLink login">
+
+                                Login
+
+                            </a>
+
+                        </div>
+
+                        <div className="navbarMobileBread">
+
+                            B
+
+                        </div>
+
+                    </div>
+
+                </div>
+            
+        )
+
+    }
+
+    /*
+
     class Navbar extends React.Component {
 
         constructor() {
@@ -88,5 +156,7 @@ import { Link } from 'react-router-dom';
         }
 
     }
+
+    */
 
 export default Navbar;

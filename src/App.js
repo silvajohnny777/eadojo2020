@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.scss';
 import './AppMobile.scss';
-import { BrowserRouter , Route , Switch } from 'react-router-dom';
+import { BrowserRouter , Route , Switch , Link , useParams } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 
 import Navbar from './components/Navbar'
@@ -36,36 +36,11 @@ class App extends React.Component {
       str.lastIndexOf(":") + 1, 
       str.lastIndexOf("/")
     );
-  
-    this.setState({
-      loading: true,
-      userLanguage: mySubString,
-    })
 
   }
 
   componentDidMount() {
             
-    fetch('http://server.ead.vairli.com/public/api/helpers/languages/'+this.state.userLanguage)
-        .then(response => response.json())
-            .then(data =>
-              this.setState({
-                languages: data,
-                loading: false
-              })
-            )
-            .catch((error) => {
-              console.error('Error:', error)
-              this.setState({
-                  loading: this.state.languageEn && false,
-                  error: true,
-              })
-            });
-
-            setTimeout(
-              () => this.setState({ exibeInfoCookie: true }), 
-              3000
-            );
             
 
     const cookies = new Cookies();
@@ -106,8 +81,7 @@ class App extends React.Component {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Navbar language={this.state.languages} languageId={this.state.userLanguage} />
           <Switch>
-            <Route path={"/:"+this.state.userLanguage} render={() => <MainPage language={this.state.languages} />} exact />
-            <Route path={"/:"+ this.state.userLanguage +"/companies"} render={() => <Companies language={this.state.languages} />} />
+            <Route path={"/:language/:id"} children={<Child />} />
             <Route render={() => <PageNotFound language={this.state.languages} />} />
           </Switch>
         </BrowserRouter>
@@ -119,5 +93,39 @@ class App extends React.Component {
   }
 
 }
+
+  function Child() {
+
+    let { id, language } = useParams();
+
+    var Arraylanguage = []
+
+    fetch('http://server.ead.vairli.com/public/api/helpers/languages/'+language)
+        .then(response => response.json())
+            .then(data =>
+              Arraylanguage.push(data)
+            )
+            .catch((error) => {
+              console.error('Error:', error)
+              
+            });
+
+            console.log(Arraylanguage[0])
+
+    switch(id) {
+      case 'home':
+        return <MainPage language={Arraylanguage} />
+      case 'companies':
+        return <Companies language={[]} />
+    }
+
+    return (
+      <>
+        {id}
+        {language}
+      </>
+    )
+
+  }
 
 export default App;

@@ -1,5 +1,6 @@
 import React from 'react'
 import PlatformPresentation from '../actionComponents/PlatformPresentation'
+import { withNamespaces } from 'react-i18next';
 
 import Stats from '../images/palmHands.gif'
 
@@ -18,6 +19,7 @@ import OfferBusiness from '../images/business.svg'
                 items: [
                 ],
                 offers: [],
+                loader: false,
             }
 
         }
@@ -65,6 +67,7 @@ import OfferBusiness from '../images/business.svg'
         }
 
         render() {
+            const { t } = this.props
 
             return (
 
@@ -86,7 +89,7 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPagePresentationTitle">
 
-                                        {this.state.language.WEBSITE_TEXT_CREATE_ONLINE_COURSES}
+                                        {t('WEBSITE_TEXT_CREATE_ONLINE_COURSES')}
 
                                     </div>
 
@@ -94,7 +97,7 @@ import OfferBusiness from '../images/business.svg'
 
                                         <div className="mainPagePresentationButton">
 
-                                            {this.state.language.TEXT_SIGNUP}
+                                            {t('TEXT_SIGNUP')}
 
                                         </div>
 
@@ -162,13 +165,13 @@ import OfferBusiness from '../images/business.svg'
 
                                 <div className="mainPageThirdSectionLeftTitle">
 
-                                    {this.state.language.WEBSITE_TEXT_SECTION_TWO}
+                                    {t('WEBSITE_TEXT_SECTION_TWO')}
 
                                 </div>
 
                                 <div className="mainPageThirdSectionLefdescription">
 
-                                    {this.state.language.WEBSITE_TEXT_DESCRIPTION_SECTION_TWO}
+                                    {t('WEBSITE_TEXT_DESCRIPTION_SECTION_TWO')}
 
                                 </div>
 
@@ -245,7 +248,7 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPageHelpTitleString">
 
-                                        {this.state.language.WEBSITE_TEXT_NEED_HELP}
+                                        {t('WEBSITE_TEXT_NEED_HELP')}
 
                                     </div>
 
@@ -255,7 +258,7 @@ import OfferBusiness from '../images/business.svg'
 
                                 <div className="mainPageTextDescription">
 
-                                    {this.state.language.WEBSITE_TEXT_NEED_HELP_DESCRIPTION}
+                                    {t('WEBSITE_TEXT_NEED_HELP_DESCRIPTION')}
 
                                 </div>
 
@@ -263,7 +266,7 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPageTextButton">
 
-                                        {this.state.language.WEBSITE_TEXT_NEED_HELP}
+                                        {t('WEBSITE_TEXT_NEED_HELP_BUTTON')}
                                         
                                         <i className="fas iconButon fa-chevron-right"></i>
 
@@ -283,7 +286,7 @@ import OfferBusiness from '../images/business.svg'
 
                             <div className="mainPageTalkWithUs">
 
-                                {this.state.language.WEBSITE_TEXT_EMAIL}
+                                {t('WEBSITE_TEXT_EMAIL')}
 
                             </div>
 
@@ -309,4 +312,4 @@ import OfferBusiness from '../images/business.svg'
 
     }
 
-export default MainPage;
+    export default withNamespaces()(MainPage);
