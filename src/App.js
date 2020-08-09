@@ -1,8 +1,11 @@
 import React from 'react';
 import './App.scss';
 import './AppMobile.scss';
-import { BrowserRouter , Route , Switch , Link , useParams } from 'react-router-dom';
+import { BrowserRouter , Route , Switch , useParams } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+
+import { i18nStart } from './i18n'
+import i18n from "i18next";
 
 import Navbar from './components/Navbar'
 import MainPage from './components/MainPage'
@@ -30,23 +33,26 @@ class App extends React.Component {
 
   componentWillMount() {
 
-    const str = window.location.href;
-
-    var mySubString = str.substring(
-      str.lastIndexOf(":") + 1, 
-      str.lastIndexOf("/")
-    );
+    i18nStart('en')
 
   }
 
   componentDidMount() {
-            
-            
 
     const cookies = new Cookies();
  
     cookies.set('language', this.state.userLanguage, { path: '/' });
-    console.log('language >' +cookies.get('language')); // Pacman
+
+  
+
+    setTimeout(
+    function() {
+        this.setState({ 
+          exibeInfoCookie: true });
+    }
+    .bind(this),
+    3000
+);
 
   }
 
@@ -82,6 +88,7 @@ class App extends React.Component {
           <Navbar language={this.state.languages} languageId={this.state.userLanguage} />
           <Switch>
             <Route path={"/:language/:id"} children={<Child />} />
+            <Route path={"/:language"} children={<Child />} />
             <Route render={() => <PageNotFound language={this.state.languages} />} />
           </Switch>
         </BrowserRouter>
@@ -98,33 +105,22 @@ class App extends React.Component {
 
     let { id, language } = useParams();
 
+    console.log('pagina > ' +id + ' language > ' +language)
+
+    if(!i18n.isInitialized) {
+
+      i18nStart(language)
+
+    }
+
     var Arraylanguage = []
 
-    fetch('http://server.ead.vairli.com/public/api/helpers/languages/'+language)
-        .then(response => response.json())
-            .then(data =>
-              Arraylanguage.push(data)
-            )
-            .catch((error) => {
-              console.error('Error:', error)
-              
-            });
-
-            console.log(Arraylanguage[0])
-
     switch(id) {
-      case 'home':
+      default:
         return <MainPage language={Arraylanguage} />
       case 'companies':
         return <Companies language={[]} />
     }
-
-    return (
-      <>
-        {id}
-        {language}
-      </>
-    )
 
   }
 
