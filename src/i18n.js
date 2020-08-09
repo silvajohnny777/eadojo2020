@@ -22,6 +22,6 @@ i18n
     }
   });
 
-  console.log(detector)
+  console.log(i18n)
 
 export default i18n;
