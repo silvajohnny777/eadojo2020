@@ -5,6 +5,7 @@ import { BrowserRouter , Route , Switch , useParams } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 
 import { i18nStart } from './i18n'
+import i18n from "i18next";
 
 import Navbar from './components/Navbar'
 import MainPage from './components/MainPage'
@@ -106,7 +107,11 @@ class App extends React.Component {
 
     console.log('pagina > ' +id + ' language > ' +language)
 
-    i18nStart(language)
+    if(!i18n.isInitialized) {
+
+      i18nStart(language)
+
+    }
 
     var Arraylanguage = []
 
