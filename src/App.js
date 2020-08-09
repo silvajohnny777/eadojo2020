@@ -32,7 +32,7 @@ class App extends React.Component {
 
   componentWillMount() {
 
-    i18nStart()
+    i18nStart('en')
 
   }
 
