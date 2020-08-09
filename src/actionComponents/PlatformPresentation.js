@@ -1,4 +1,5 @@
 import React from 'react'
+import { withNamespaces } from 'react-i18next';
 
     class PlatformPresentation extends React.Component {
 
@@ -18,32 +19,32 @@ import React from 'react'
 
             this.setState({
                 language: this.props.language,
-                activeImage: this.props.language.WEBSITE_TEXT_FEATURE_ONE_IMAGE,
+                activeImage: 'WEBSITE_TEXT_FEATURE_ONE_IMAGE',
                 features: [
                     {
-                        title: this.props.language.WEBSITE_TEXT_FEATURE_ONE,
-                        image: this.props.language.WEBSITE_TEXT_FEATURE_ONE_IMAGE,
-                        description: this.props.language.WEBSITE_TEXT_FEATURE_ONE_DESCRIPTION,
+                        title: 'WEBSITE_TEXT_FEATURE_ONE',
+                        image: 'WEBSITE_TEXT_FEATURE_ONE_IMAGE',
+                        description: 'WEBSITE_TEXT_FEATURE_ONE_DESCRIPTION',
                     },
                     {
-                        title: this.props.language.WEBSITE_TEXT_FEATURE_TWO,
-                        image: this.props.language.WEBSITE_TEXT_FEATURE_TWO_IMAGE,
-                        description: this.props.language.WEBSITE_TEXT_FEATURE_TWO_DESCRIPTION,
+                        title: 'WEBSITE_TEXT_FEATURE_TWO',
+                        image: 'WEBSITE_TEXT_FEATURE_TWO_IMAGE',
+                        description: 'WEBSITE_TEXT_FEATURE_TWO_DESCRIPTION',
                     },
                     {
-                        title: this.props.language.WEBSITE_TEXT_FEATURE_THREE,
-                        image: this.props.language.WEBSITE_TEXT_FEATURE_THREE_IMAGE,
-                        description: this.props.language.WEBSITE_TEXT_FEATURE_THREE_DESCRIPTION,
+                        title: 'WEBSITE_TEXT_FEATURE_THREE',
+                        image: 'WEBSITE_TEXT_FEATURE_THREE_IMAGE',
+                        description: 'WEBSITE_TEXT_FEATURE_THREE_DESCRIPTION',
                     },
                     {
-                        title: this.props.language.WEBSITE_TEXT_FEATURE_FOUR,
-                        image: this.props.language.WEBSITE_TEXT_FEATURE_FOUR_IMAGE,
-                        description: this.props.language.WEBSITE_TEXT_FEATURE_FOUR_DESCRIPTION,
+                        title: 'WEBSITE_TEXT_FEATURE_FOUR',
+                        image: 'WEBSITE_TEXT_FEATURE_FOUR_IMAGE',
+                        description: 'WEBSITE_TEXT_FEATURE_FOUR_DESCRIPTION',
                     },
                     {
-                        title: this.props.language.WEBSITE_TEXT_FEATURE_FIVE,
-                        image: this.props.language.WEBSITE_TEXT_FEATURE_FIVE_IMAGE,
-                        description: this.props.language.WEBSITE_TEXT_FEATURE_FIVE_DESCRIPTION,
+                        title: 'WEBSITE_TEXT_FEATURE_FIVE',
+                        image: 'WEBSITE_TEXT_FEATURE_FIVE_IMAGE',
+                        description: 'WEBSITE_TEXT_FEATURE_FIVE_DESCRIPTION',
                     },
                 ]
             })
@@ -61,6 +62,8 @@ import React from 'react'
 
         render() {
 
+            const { t } = this.props
+
             return (
 
                 <div className="platformPresentationContainer">
@@ -69,19 +72,19 @@ import React from 'react'
 
                         <div className="platformPresentationContentTitle">
 
-                            {this.state.language.WEBSITE_TEXT_SECTION_THREE}
+                            {t('WEBSITE_TEXT_SECTION_THREE')}
 
                         </div>
 
                         <div className="platformPresentationContentDescription">
 
-                            {this.state.language.WEBSITE_TEXT_DESCRIPTION_SECTION_THREE}
+                            {t('WEBSITE_TEXT_DESCRIPTION_SECTION_THREE')}
 
                         </div>
 
                         <div className="platformPresentationContentImageActive">
 
-                            {this.state.activeImage}
+                            {t(this.state.activeImage)}
 
                         </div>
 
@@ -97,7 +100,7 @@ import React from 'react'
 
                                             <div className={this.state.activeId === index ? "featureBox active" : "featureBox"} onMouseEnter={() => this.changeImage(feature.image, index)}>
 
-                                                {feature.title}
+                                                {t(feature.title)}
 
                                             </div>
 
@@ -107,7 +110,7 @@ import React from 'react'
 
                                                     <div className="featureBoxDescription">
                                                         
-                                                        {feature.description}
+                                                        {t(feature.description)}
 
                                                     </div>
 
@@ -133,4 +136,4 @@ import React from 'react'
 
     }
 
-export default PlatformPresentation;
+export default withNamespaces()(PlatformPresentation);

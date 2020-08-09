@@ -31,35 +31,35 @@ import OfferBusiness from '../images/business.svg'
                 items: [
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/certificate.png',
-                        title: this.props.language.WEBSITE_TEXT_CERTIFICATE,
+                        title: 'WEBSITE_TEXT_CERTIFICATE',
                         description: 'mobile_description',
                     },
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/edit-property.png',
-                        title: this.props.language.WEBSITE_TEXT_CUSTOMIZABLE,
+                        title: 'WEBSITE_TEXT_CUSTOMIZABLE',
                         description: 'mobile_description',
                     },
                     {
                         icon: 'https://img.icons8.com/nolan/64/000000/upload-to-cloud.png',
-                        title: this.props.language.WEBSITE_TEXT_CLOUD,
+                        title: 'WEBSITE_TEXT_CLOUD',
                         description: 'mobile_description',
                     },
                 ],
                 offers: [
                     {
                         image: OfferStats,
-                        title: this.props.language.WEBSITE_TEXT_STATS,
-                        description: this.props.language.WEBSITE_TEXT_STATS_DESCRIPTION,
+                        title: 'WEBSITE_TEXT_STATS',
+                        description: 'WEBSITE_TEXT_STATS_DESCRIPTION',
                     },
                     {
                         image: OfferCustomizable,
-                        title: this.props.language.WEBSITE_TEXT_CUSTOMIZABLE,
-                        description: this.props.language.WEBSITE_TEXT_CUSTOMIZABLE_DESCRIPTION,
+                        title: 'WEBSITE_TEXT_CUSTOMIZABLE',
+                        description: 'WEBSITE_TEXT_CUSTOMIZABLE_DESCRIPTION',
                     },
                     {
                         image: OfferBusiness,
-                        title: this.props.language.WEBSITE_TEXT_BUSINESS,
-                        description: this.props.language.WEBSITE_TEXT_BUSINESS_DESCRIPTION,
+                        title: 'WEBSITE_TEXT_BUSINESS',
+                        description: 'WEBSITE_TEXT_BUSINESS_DESCRIPTION',
                     },
                 ],
             })
@@ -67,6 +67,7 @@ import OfferBusiness from '../images/business.svg'
         }
 
         render() {
+
             const { t } = this.props
 
             return (
@@ -95,11 +96,11 @@ import OfferBusiness from '../images/business.svg'
 
                                     <div className="mainPagePresentationDescription">
 
-                                        <div className="mainPagePresentationButton">
+                                        <a className="mainPagePresentationButton" href="http://panel.ead.vairli.com/#/register">
 
                                             {t('TEXT_SIGNUP')}
 
-                                        </div>
+                                        </a>
 
                                     </div>
 
@@ -133,13 +134,13 @@ import OfferBusiness from '../images/business.svg'
 
                                                 <div className="mainPageBoxInfoTitle">
 
-                                                    {item.title}
+                                                    {t(item.title)}
 
                                                 </div>
 
                                                 <div className="mainPageBoxInfoDescription">
 
-                                                    {item.description}
+                                                    {t(item.description)}
 
                                                 </div>
 
@@ -206,7 +207,7 @@ import OfferBusiness from '../images/business.svg'
 
                                                 <div className="mainOfferTitle">
                 
-                                                    {offer.title}
+                                                    {t(offer.title)}
 
                                                 </div>
 
@@ -214,7 +215,7 @@ import OfferBusiness from '../images/business.svg'
 
                                                 <div className="mainOfferDescription">
 
-                                                    {offer.description}
+                                                    {t(offer.description)}
 
                                                 </div>
                 

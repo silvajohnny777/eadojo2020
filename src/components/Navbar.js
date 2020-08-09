@@ -1,7 +1,13 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
+import { withNamespaces } from 'react-i18next';
+import i18n from "i18next";
 
-    const Navbar = () => {
+    const Navbar = ({t}) => {
+
+        let { id, language } = useParams();
+
+        console.log('navbar > ', id, language, i18n)
 
         return (
 
@@ -11,15 +17,15 @@ import { Link } from 'react-router-dom';
 
                         <div className="navbarContentHome">
 
-                            <Link to={"/en/home"} className="navbarHome">
+                            <Link to={`/${i18n.language}`} className="navbarHome">
 
                                 <span className="eadHightlight">
 
-                                    ead
+                                    {t('PLATFORM_NAME').toLowerCase().substring(0, 3)}
 
                                 </span>
 
-                                ojo
+                                {t('PLATFORM_NAME').substring(3)}
 
                             </Link>                            
 
@@ -27,27 +33,27 @@ import { Link } from 'react-router-dom';
 
                         <div className="navbarContentLinks">
 
-                            <Link to={`/en/companies`} className="navbarLink">
+                            <Link to={`/${i18n.language}/companies`} className="navbarLink">
 
-                                Companies
-
-                            </Link>
-
-                            <Link to={`/en/colleges`} className="navbarLink">
-
-                                Colleges
+                                {t('WEBSITE_TEXT_COMPANIES')}
 
                             </Link>
 
-                            <Link to={`/en/teachers`} className="navbarLink">
+                            <Link to={`/${i18n.language}/colleges`} className="navbarLink">
 
-                                Teachers
+                                {t('WEBSITE_TEXT_COLLEGES')}
 
                             </Link>
 
-                            <a href="http://panel.ead.vairli.com/#/login" target="_blank" rel="noopener noreferrer" className="navbarLink login">
+                            <Link to={`/${i18n.language}/teachers`} className="navbarLink">
 
-                                Login
+                                {t('WEBSITE_TEXT_TEACHERS')}
+
+                            </Link>
+
+                            <a href="http://panel.ead.vairli.com/#/login" rel="noopener noreferrer" className="navbarLink login">
+
+                                {t('TEXT_AUTH_LOGIN')}
 
                             </a>
 
@@ -159,4 +165,4 @@ import { Link } from 'react-router-dom';
 
     */
 
-export default Navbar;
+export default withNamespaces()(Navbar);

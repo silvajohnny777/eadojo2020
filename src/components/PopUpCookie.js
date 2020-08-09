@@ -1,5 +1,6 @@
 import React from 'react'
 import Cookie from '../images/cookie.svg'
+import { withNamespaces } from 'react-i18next';
 
     class PopUpCookie extends React.Component {
 
@@ -23,6 +24,8 @@ import Cookie from '../images/cookie.svg'
 
         render() {
 
+            const { t } = this.props
+
             return (
 
                 <div className="popUpCookieContainer">
@@ -33,7 +36,7 @@ import Cookie from '../images/cookie.svg'
             
                             <img className="popUpCookieTag" alt="cookieImage" src={Cookie} />
 
-                            <div className="popUpCookieText">{this.state.languages.COOKIE_TEXT}</div>
+                            <div className="popUpCookieText">{t('COOKIE_TEXT')}</div>
 
                         </div>
 
@@ -53,4 +56,4 @@ import Cookie from '../images/cookie.svg'
 
     }
 
-export default PopUpCookie;
+export default withNamespaces()(PopUpCookie);

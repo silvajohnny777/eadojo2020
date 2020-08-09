@@ -7,21 +7,25 @@ import { reactI18nextModule } from "react-i18next";
 // '../public/locales/en/translation.json'
 // which is the default for the xhr backend to load from
 
+export function i18nStart(language) {
+
+  console.log('i18n', language)
+
 i18n
   .use(detector)
   .use(backend)
   .use(reactI18nextModule) // passes i18n down to react-i18next
   .init({
     lng: "en",
-    fallbackLng: "en", // use en if detected lng is not available
+    fallbackLng: language, // use en if detected lng is not available
     preload: ['en'],
     ns: ["translation"],
     defaultNS: 'translation',
     backend: {
-        loadPath: 'http://server.ead.vairli.com/public/api/helpers/languages/en'
+        loadPath: 'http://server.ead.vairli.com/public/api/helpers/languages/'+language
     }
   });
 
-  console.log(detector)
+  
 
-export default i18n;
+}
