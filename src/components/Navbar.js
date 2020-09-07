@@ -11,6 +11,10 @@ import i18n from "i18next";
 
         return (
 
+            <>
+
+                {/*
+
                 <div className="navbarContainer">
 
                     <div className="navbarContent">
@@ -51,7 +55,7 @@ import i18n from "i18next";
 
                             </Link>
 
-                            <a href="http://panel.ead.vairli.com/#/login" rel="noopener noreferrer" className="navbarLink login">
+                            <a href="https://panel.eadojo.com/login" rel="noopener noreferrer" className="navbarLink login">
 
                                 {t('TEXT_AUTH_LOGIN')}
 
@@ -68,101 +72,130 @@ import i18n from "i18next";
                     </div>
 
                 </div>
-            
-        )
 
-    }
-
-    /*
-
-    class Navbar extends React.Component {
-
-        constructor() {
-
-            super()
-
-            this.state = {
-                languages: []
-            }
-
-        }
-
-        componentWillMount() {
-
-            this.setState({
-                languages: this.props.language
-            })
-
-        }
-
-        render() {
-
-            return (
-
-                <div className="navbarContainer">
+                */}
+                
+                <nav className="navbar navbarContainer" role="navigation" aria-label="main navigation">
 
                     <div className="navbarContent">
 
-                        <div className="navbarContentHome">
+                    <div className="navbar-brand navbarContentHome">
 
-                            <Link to={"/"+this.props.languageId} className="navbarHome">
+                        <Link to={`/${i18n.language}`} className="navbar-item navbarHome">
 
-                                <span className="eadHightlight">
+                            <span className="eadHightlight">
 
-                                    {this.state.languages.PLATFORM_NAME.toLowerCase().substring(0, 3)}
+                                {t('PLATFORM_NAME').toLowerCase().substring(0, 3)}
 
-                                </span>
+                            </span>
 
-                                {this.state.languages.PLATFORM_NAME.substring(3)}
+                            {t('PLATFORM_NAME').substring(3)}
 
-                            </Link>                            
+                        </Link>
+
+                        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+                        <span aria-hidden="true"></span>
+
+                        </a>
+
+                    </div>
+
+                    <div id="navbarBasicExample" className="navbar-menu">
+
+                        <div className="navbar-start navbarContentLinks">
+                            
+                            {/*
+
+                            <Link to={`/${i18n.language}/companies`} className="navbar-item navbarLink">
+
+                                {t('WEBSITE_TEXT_COMPANIES')}
+
+                            </Link>
+
+                            <Link to={`/${i18n.language}/colleges`} className="navbar-item navbarLink">
+
+                                {t('WEBSITE_TEXT_COLLEGES')}
+
+                            </Link>
+
+                            <Link to={`/${i18n.language}/teachers`} className="navbar-item navbarLink">
+
+                                {t('WEBSITE_TEXT_TEACHERS')}
+
+                            </Link>
+
+                            /*}
+
+                            {/*
+
+                            <a className="navbar-item">
+                                Documentation
+                            </a>
+
+                            <div className="navbar-item has-dropdown is-hoverable">
+
+                                <a className="navbar-link">
+                                More
+                                </a>
+
+                                <div className="navbar-dropdown">
+
+                                    <a className="navbar-item">
+                                        About
+                                    </a>
+                                    <a className="navbar-item">
+                                        Jobs
+                                    </a>
+                                    <a className="navbar-item">
+                                        Contact
+                                    </a>
+                                    <hr className="navbar-divider" />
+                                    <a className="navbar-item">
+                                        Report an issue
+                                    </a>
+
+                                </div>
+
+                            </div>
+
+                            */}
 
                         </div>
 
-                        <div className="navbarContentLinks">
+                        <div className="navbar-end">
 
-                            <Link to={`/:${this.props.languageId}/companies`} className="navbarLink">
+                        <div className="navbar-item">
 
-                                {this.state.languages.WEBSITE_TEXT_COMPANIES}
 
-                            </Link>
+                            {/*
 
-                            <Link to={`/:${this.props.languageId}/colleges`} className="navbarLink">
+                            <a className="button is-primary">
 
-                                {this.state.languages.WEBSITE_TEXT_COLLEGES}
+                                <strong>Sign up</strong>
 
-                            </Link>
+                            </a>
 
-                            <Link to={`/:${this.props.languageId}/teachers`} className="navbarLink">
+                            */}
 
-                                {this.state.languages.WEBSITE_TEXT_TEACHERS}
+                            <a href="https://panel.eadojo.com/login" className="button is-light navbarLink login">
 
-                            </Link>
-
-                            <a href="http://panel.ead.vairli.com/#/login" target="_blank" rel="noopener noreferrer" className="navbarLink login">
-
-                                {this.state.languages.TEXT_AUTH_LOGIN}
+                                {t('TEXT_AUTH_LOGIN')}
 
                             </a>
 
                         </div>
-
-                        <div className="navbarMobileBread">
-
-                            B
-
                         </div>
-
                     </div>
+                    </div>
+                    </nav>
 
-                </div>
-
-            )
-
-        }
+            </>
+            
+        )
 
     }
-
-    */
 
 export default withNamespaces()(Navbar);

@@ -9,16 +9,10 @@ import { withNamespaces } from 'react-i18next';
             super()
 
             this.state = {
-                languages: []
+                
+                
+
             }
-
-        }
-
-        componentWillMount() {
-
-            this.setState({
-                languages: this.props.language
-            })
 
         }
 
@@ -28,7 +22,7 @@ import { withNamespaces } from 'react-i18next';
 
             return (
 
-                <div className="popUpCookieContainer">
+                <div className="popUpCookieContainer" style={{display: !this.props.show && 'none'}}>
 
                     <div className="popUpCookieContent">
 
@@ -42,7 +36,7 @@ import { withNamespaces } from 'react-i18next';
 
                         <div className="popUpCookieButton" onClick={() => this.props.removeInfoCookie()}>
 
-                            Got it!
+                            {t('COOKIE_TEXT_GOT_IT')}
 
                         </div>
 

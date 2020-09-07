@@ -12,9 +12,55 @@
 }
 
 :root {
-  --platform-main-font: 'Roboto';
+  --platform-main-font: 'Eadojo Font Title', 'Editor Font Title';
+  --platform-secondary-font: 'Eadojo Font', 'Editor Font';
   --platform-main-color: #3c3347;
   --platform-light-color: #7d728a;
+}
+
+@keyframes fadeIn{
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity:0;
+  }
+  100% {
+    opacity:1;
+  }
 }
 
 @media screen and (min-width: 769px) {
@@ -27,6 +73,12 @@
     position: fixed;
     width: 100%;
     bottom: 30px;
+    animation: fadeIn ease 0.5s;
+    -webkit-animation: fadeIn ease 0.5s;
+    -moz-animation: fadeIn ease 0.5s;
+    -o-animation: fadeIn ease 0.5s;
+    -ms-animation: fadeIn ease 0.5s;
+    z-index: 1;
 
     .popUpCookieContent {
       width: 90%;
@@ -52,7 +104,8 @@
       }
 
       .popUpCookieButton {
-        width: 80px;
+        width: fit-content;
+        padding: 0 10px;
         height: 40px;
         background-color: var(--platform-light-color);
         border-radius: 5px;
@@ -91,6 +144,7 @@
       .navbarContentHome {
 
         .navbarHome {
+          padding: 0;
           font-size: 34px;
           font-weight: bold;
           color: var(--platform-main-color);
@@ -134,7 +188,8 @@
           }
 
           &:hover {
-            color: var(--platform-main-color);
+            color: #FFF;
+            background-color: var(--platform-main-color)
           }
 
         }
@@ -145,6 +200,146 @@
         display: none;
       }
 
+    }
+
+  }
+
+  .firstSectionContainer {
+    background-color: var(--platform-light-color);
+    color: #FFF;
+
+    .firstSectionContent {
+
+      .firstSectionTextContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .firstSectionTextContentTitle {
+          color: #FFF;
+        }
+
+        .firstSectionTextContentSubtitle {
+          color: #FFF;
+        }
+
+        .firstSectionTextContentButton {
+          transition: .4s ease;
+
+          &:hover {
+            background-color: var(--platform-main-color);
+
+            .firstSectionTextContentButtonText {
+              color: #FFF;
+            }
+
+          }
+          
+          .firstSectionTextContentButtonText {
+            text-decoration: none;
+            color: #363636;
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+  
+  .secondSectionInfoBoxContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .secondSectionInfoBox {
+      min-width: 1000px;
+      min-height: 200px;
+      border-radius: 6px;
+      position: absolute;
+      text-align: center;
+
+      .secondSectionInfoBox {
+        font-family: var(--platform-main-font);
+        color: var(--platform-main-color);
+      }
+
+      .secondSectionInfoBoxSubtitle {
+        font-family: var(--platform-secondary-font);
+      }
+
+      .media {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+
+      .mainPageBoxInfo {
+        text-align: center;
+
+        .mainPageBoxInfoText {
+
+          .mainPageBoxInfoTitle {
+            font-family: var(--platform-main-font);
+            font-weight: bold;
+          }
+
+          .mainPageBoxInfoDescription {
+            font-family: var(--platform-secondary-font);
+          }
+
+        }
+
+      }
+
+    }
+
+  }
+
+  .thirdSectionContainer {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+
+    .thirdSectionContent {
+      margin-top: 200px;
+      margin-bottom: 100px;
+      width: 1000px;
+      background-color: #FFF;
+
+      .thirdSectionContentTitle {
+        text-align: center;
+      }
+
+      .thirdSectionContentColumnContainer {
+        margin: 100px 0;
+        height: 200px;
+        display: flex;
+        align-items: center;
+
+        .thirdSectionContentColumnImage {
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+      }
+
+    }
+
+  }
+
+  .helpSectionContainer {
+    display: flex;
+    justify-content: center;
+    max-width: 1000px;
+
+    .helpSectionContent {
+      width: 1000px;
+      margin: 200px 0;
+      text-align: center;
     }
 
   }

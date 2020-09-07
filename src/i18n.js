@@ -17,12 +17,13 @@ i18n
   .use(reactI18nextModule) // passes i18n down to react-i18next
   .init({
     lng: "en",
-    fallbackLng: language, // use en if detected lng is not available
+    fallbackLng: false, // use en if detected lng is not available
     preload: ['en'],
     ns: ["translation"],
     defaultNS: 'translation',
+    load: 'currentOnly',
     backend: {
-        loadPath: 'http://server.ead.vairli.com/public/api/helpers/languages/'+language
+        loadPath: 'https://server.eadojo.com/api/v1/helpers/languages/'+language
     }
   });
 

@@ -42,6 +42,53 @@
     
     }
 
+    .firstSectionContainer {
+      background-color: var(--platform-light-color);
+      color: #FFF;
+  
+      .firstSectionContent {
+  
+        .firstSectionTextContent {
+  
+          .firstSectionTextContentTitle {
+            color: #FFF;
+          }
+  
+          .firstSectionTextContentSubtitle {
+            color: #FFF;
+          }
+  
+        }
+  
+      }
+  
+    }
+
+    .secondSectionInfoBoxContainer {
+
+      .secondSectionInfoBox {
+
+        .media {
+          display: block;
+        }
+
+      }
+
+    }
+
+    .thirdSectionContainer {
+
+      .thirdSectionContent {
+        margin-top: 50px;
+
+        .thirdSectionContentColumnContainer {
+          display: block;
+        }
+
+      }
+
+    }
+
     .mainPageContainer {
         font-family: var(--platform-main-font);
         display: flex;

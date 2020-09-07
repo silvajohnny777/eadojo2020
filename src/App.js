@@ -1,8 +1,10 @@
 import React from 'react';
 import './App.scss';
 import './AppMobile.scss';
+import 'bulma/css/bulma.css'
 import { BrowserRouter , Route , Switch , useParams } from 'react-router-dom';
 import Cookies from 'universal-cookie';
+import PopUpCookie from './components/PopUpCookie'
 
 import { i18nStart } from './i18n'
 import i18n from "i18next";
@@ -11,7 +13,6 @@ import Navbar from './components/Navbar'
 import MainPage from './components/MainPage'
 import Companies from './components/pages/Companies'
 import MainPageLoading from './actionComponents/MainPageLoading'
-import PopUpCookie from './components/PopUpCookie'
 
 import PageNotFound from './components/PageNotFound'
 
@@ -33,26 +34,20 @@ class App extends React.Component {
 
   componentWillMount() {
 
-    i18nStart('en')
+    i18nStart('')
 
   }
 
   componentDidMount() {
 
-    const cookies = new Cookies();
- 
-    cookies.set('language', this.state.userLanguage, { path: '/' });
-
-  
-
     setTimeout(
-    function() {
-        this.setState({ 
-          exibeInfoCookie: true });
-    }
-    .bind(this),
-    3000
-);
+      function() {
+          this.setState({ 
+            exibeInfoCookie: true });
+      }
+      .bind(this),
+      3000
+    );
 
   }
 
@@ -75,15 +70,9 @@ class App extends React.Component {
       :
 
       <>
+            
+      <PopUpCookie removeInfoCookie={this.removeInfoCookie} show={this.state.exibeInfoCookie} />
 
-        {
-
-          this.state.exibeInfoCookie &&
-
-            <PopUpCookie removeInfoCookie={this.removeInfoCookie} language={this.state.languages} />
-
-        }
-      
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Navbar language={this.state.languages} languageId={this.state.userLanguage} />
           <Switch>
@@ -103,9 +92,15 @@ class App extends React.Component {
 
   function Child() {
 
+    const cookies = new Cookies();
+
     let { id, language } = useParams();
 
-    console.log('pagina > ' +id + ' language > ' +language)
+    if(i18n.isInitialized){
+
+    console.log('pagina > ' +id + ' language > ' +language, i18n)
+ }
+    cookies.set('language', language, { path: '/' });
 
     if(!i18n.isInitialized) {
 
