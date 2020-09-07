@@ -86,7 +86,7 @@ import OfferBusiness from '../images/business.svg'
 
                         <div className="container firstSectionTextContent">
 
-                            <h1 className="title firstSectionTextContentTitle">
+                            <h1 className="title is-1 firstSectionTextContentTitle">
 
                                 {t('PLATFORM_NAME')}
 
@@ -104,7 +104,7 @@ import OfferBusiness from '../images/business.svg'
 
                             </h2>
                             
-                            <button className="button is-medium is-rounded firstSectionTextContentButton">
+                            <button className="button is-medium firstSectionTextContentButton">
 
                                 <a className="firstSectionTextContentButtonText" href="http://panel.eadojo.com/register">{t('TEXT_SIGNUP')}</a>
 
@@ -345,11 +345,11 @@ import OfferBusiness from '../images/business.svg'
 
                     */}
 
-                    <div class="container helpSectionContainer">
+                    <div className="container helpSectionContainer">
                         
-                        <div class="helpSectionContent">
+                        <div className="helpSectionContent">
 
-                            <h1 className="title firstSectionTextContentTitle">
+                            <h1 className="title is-1 firstSectionTextContentTitle">
 
                                 {t('WEBSITE_TEXT_NEED_HELP')}
 
@@ -433,8 +433,8 @@ import OfferBusiness from '../images/business.svg'
 
                     </div>
 
-                    <footer class="footer">
-                        <div class="content has-text-centered">
+                    <footer className="footer">
+                        <div className="content has-text-centered">
                             <p>
                             Footer
                             </p>

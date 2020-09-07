@@ -78,7 +78,7 @@
     -moz-animation: fadeIn ease 0.5s;
     -o-animation: fadeIn ease 0.5s;
     -ms-animation: fadeIn ease 0.5s;
-    z-index: 1;
+    z-index: 9;
 
     .popUpCookieContent {
       width: 90%;
@@ -200,6 +200,28 @@
         display: none;
       }
 
+      .navbar-menu {
+
+        .loginButton {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          min-width: 120px;
+          padding: 0 10px;
+          width: fit-content;
+          height: 50px;
+          background-color: var(--platform-light-color);
+          color: #fff;
+          transition: .4s ease;
+          
+          &:hover {
+            background-color: var(--platform-main-color);
+          }
+
+        }
+
+      }
+
     }
 
   }
@@ -259,6 +281,7 @@
       border-radius: 6px;
       position: absolute;
       text-align: center;
+      z-index: 1;
 
       .secondSectionInfoBox {
         font-family: var(--platform-main-font);
@@ -337,9 +360,14 @@
     max-width: 1000px;
 
     .helpSectionContent {
-      width: 1000px;
+      width: 500px;
       margin: 200px 0;
       text-align: center;
+
+      .firstSectionTextContentTitle {
+        margin-bottom: 50px;
+      }
+
     }
 
   }

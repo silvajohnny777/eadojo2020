@@ -57,11 +57,11 @@ import { withNamespaces } from 'react-i18next';
 
                     {
 
-                        this.state.courseSteps.map((step) => {
+                        this.state.courseSteps.map((step, index) => {
 
                             return (
 
-                                <div className="columns is-mobile thirdSectionContentColumnContainer">
+                                <div key={index} className="columns is-mobile thirdSectionContentColumnContainer">
 
                                     <div className="column is-mobile thirdSectionContentColumnImage">
                                         
@@ -93,7 +93,7 @@ import { withNamespaces } from 'react-i18next';
 
                     }
 
-                    <button class="button is-rounded">{t('TEXT_SIGNUP')}</button>
+                    <button className="button is-rounded">{t('TEXT_SIGNUP')}</button>
                         
                     </div>
                 </div>

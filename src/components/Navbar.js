@@ -1,13 +1,11 @@
 import React from 'react'
-import { Link, useParams } from 'react-router-dom';
+import { Link, /*useParams*/ } from 'react-router-dom';
 import { withNamespaces } from 'react-i18next';
 import i18n from "i18next";
 
     const Navbar = ({t}) => {
 
-        let { id, language } = useParams();
-
-        console.log('navbar > ', id, language, i18n)
+        //let { id, language } = useParams();
 
         return (
 
@@ -93,13 +91,13 @@ import i18n from "i18next";
 
                         </Link>
 
-                        <a role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
+                        <span role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
 
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
                         <span aria-hidden="true"></span>
 
-                        </a>
+                        </span>
 
                     </div>
 
@@ -180,7 +178,7 @@ import i18n from "i18next";
 
                             */}
 
-                            <a href="https://panel.eadojo.com/login" className="button is-light navbarLink login">
+                            <a href="https://panel.eadojo.com/login" className="button loginButton">
 
                                 {t('TEXT_AUTH_LOGIN')}
 

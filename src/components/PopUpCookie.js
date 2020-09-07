@@ -30,7 +30,7 @@ import { withNamespaces } from 'react-i18next';
             
                             <img className="popUpCookieTag" alt="cookieImage" src={Cookie} />
 
-                            <div className="popUpCookieText">{t('COOKIE_TEXT')}</div>
+                            <div className="popUpCookieText">{t('WEBSITE_TEXT_COOKIE_TEXT')}</div>
 
                         </div>
 
