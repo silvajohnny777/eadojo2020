@@ -76,6 +76,7 @@ class App extends React.Component {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Navbar language={this.state.languages} languageId={this.state.userLanguage} />
           <Switch>
+            <Route path={"/:language"} exact children={<Child />} />
             <Route path={"/:language?/:id?"} children={<Child />} />
             <Route render={() => <PageNotFound language={this.state.languages} />} />
           </Switch>

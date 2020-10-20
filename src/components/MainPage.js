@@ -32,17 +32,17 @@ import OfferBusiness from '../images/business.svg'
                 language: this.props.language,
                 items: [
                     {
-                        icon: 'https://img.icons8.com/nolan/64/000000/certificate.png',
+                        icon: 'https://img.icons8.com/plasticine/344/teacher.png',
                         title: 'WEBSITE_TEXT_TEACHERS',
                         description: 'mobile_description',
                     },
                     {
-                        icon: 'https://img.icons8.com/nolan/64/000000/edit-property.png',
+                        icon: 'https://img.icons8.com/fluent/452/school.png',
                         title: 'WEBSITE_TEXT_SCHOOLS',
                         description: 'mobile_description',
                     },
                     {
-                        icon: 'https://img.icons8.com/nolan/64/000000/upload-to-cloud.png',
+                        icon: 'https://img.icons8.com/plasticine/344/company.png',
                         title: 'WEBSITE_TEXT_COMPANIES',
                         description: 'mobile_description',
                     },
@@ -80,31 +80,31 @@ import OfferBusiness from '../images/business.svg'
 
                 <>
 
-                <section className="hero is-large firstSectionContainer">
+                <section className="hero is-medium">
 
-                    <div className="hero-body firstSectionContent">
+                    <div className="hero-body">
 
-                        <div className="container firstSectionTextContent">
+                        <div className="container">
 
-                            <h1 className="title is-1 firstSectionTextContentTitle">
+                            {
 
-                                {t('PLATFORM_NAME')}
+                                //<img className="firstSectionLogoContainer" alt="logoImage" src="http://server.eadojo.com/resources/helpers/logo_inverted.png" />
 
-                            </h1>
+                            }
 
-                            <h1 className="title firstSectionTextContentTitle">
+                            <h1 className="title has-text-centered">
 
                                 {t('WEBSITE_TEXT_THE_TOOL_TO_TEACH_ONLINE')}
 
                             </h1>
 
-                            <h2 className="subtitle firstSectionTextContentSubtitle">
+                            <p className="subtitle">
 
                                 {t('WEBSITE_TEXT_YOUR_KNOWLED_TO_THE_WHOLE_WORLD')}
 
-                            </h2>
+                            </p>
                             
-                            <button className="button is-medium firstSectionTextContentButton">
+                            <button className="button is-medium">
 
                                 <a className="firstSectionTextContentButtonText" href="http://panel.eadojo.com/register">{t('TEXT_SIGNUP')}</a>
 
@@ -120,11 +120,11 @@ import OfferBusiness from '../images/business.svg'
 
                     <div className="box secondSectionInfoBox">
 
-                    <h1 className="title secondSectionInfoBoxTitle">
+                    <h2 className="title secondSectionInfoBoxTitle">
                         
                         {t('TEXT_WEBSITE_MADE_FOR_YOU')}
                         
-                    </h1>
+                    </h2>
 
                     <article className="media columns">
 
@@ -138,23 +138,23 @@ import OfferBusiness from '../images/business.svg'
 
                                             <div className="mainPageBoxInfoIcon">
 
-                                                <img alt="icon" src={item.icon} />
+                                                <img style={{width: '100px'}} className="mainPageBoxInfoIconImageTag" alt="icon" src={item.icon} />
 
                                             </div>
 
                                             <div className="mainPageBoxInfoText">
 
-                                                <div className="mainPageBoxInfoTitle">
+                                                <p className="mainPageBoxInfoTitle">
 
                                                     {t(item.title)}
 
-                                                </div>
+                                                </p>
 
-                                                <div className="mainPageBoxInfoDescription">
+                                                <p className="mainPageBoxInfoDescription">
 
                                                     {t(item.description)}
 
-                                                </div>
+                                                </p>
 
                                             </div>
 
@@ -345,23 +345,27 @@ import OfferBusiness from '../images/business.svg'
 
                     */}
 
-                    <div className="container helpSectionContainer">
+                    <div className="container">
                         
-                        <div className="helpSectionContent">
+                        <div className="content help">
 
-                            <h1 className="title is-1 firstSectionTextContentTitle">
+                            <h2 className="title is-1">
+
+                                <p><i className="fas fa-question-circle mb-4"></i></p>
 
                                 {t('WEBSITE_TEXT_NEED_HELP')}
 
-                            </h1>
+                            </h2>
 
-                            <h2 className="subtitle firstSectionTextContentSubtitle">
+                            <hr />
+
+                            <p className="subtitle">
 
                                 {t('WEBSITE_TEXT_NEED_HELP_DESCRIPTION')}
 
-                            </h2>
+                            </p>
 
-                            <div className="button mainPageTextButton">
+                            <div className="button">
 
                                 {t('WEBSITE_TEXT_FAQ')}
 
@@ -419,25 +423,32 @@ import OfferBusiness from '../images/business.svg'
 
                     */}
 
-                    <div className="mainPageTalkWithUsContainer">
+                    <div className="container is-fluid contact">
+                            
+                        <p className="subtitle is-5 has-text-right">
 
-                        <div className="mainPageTalkWithUsContent">
-
-                            <div className="mainPageTalkWithUs">
-
-                                {t('WEBSITE_TEXT_EMAIL')}
-
-                            </div>
-
-                        </div>
-
+                            {t('WEBSITE_TEXT_EMAIL')}
+                            
+                        </p>
+                        
                     </div>
 
                     <footer className="footer">
                         <div className="content has-text-centered">
-                            <p>
-                            Footer
-                            </p>
+                            <div className="columns">
+                                <div className="column">
+                                    Footer
+                                </div>
+                                <div className="column">
+                                    Footer
+                                </div>
+                                <div className="column">
+                                    Footer
+                                </div>
+                                <div className="column">
+                                    Footer
+                                </div>
+                            </div>
                         </div>
                     </footer>
 

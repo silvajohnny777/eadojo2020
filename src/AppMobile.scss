@@ -77,12 +77,24 @@
     }
 
     .thirdSectionContainer {
+      text-align: center;
 
       .thirdSectionContent {
         margin-top: 50px;
 
         .thirdSectionContentColumnContainer {
           display: block;
+
+          .thirdSectionContentColumnImage {
+            display: flex;
+            justify-content: center;
+
+            .thirdSectionContentColumnImageTag {
+              max-width: 100px;
+            }
+
+          }
+
         }
 
       }

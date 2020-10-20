@@ -73,13 +73,13 @@ import i18n from "i18next";
 
                 */}
                 
-                <nav className="navbar navbarContainer" role="navigation" aria-label="main navigation">
+                <nav className="navbar" role="navigation" aria-label="main navigation">
 
-                    <div className="navbarContent">
+                    <div className="container">
 
-                    <div className="navbar-brand navbarContentHome">
+                    <div className="navbar-brand">
 
-                        <Link to={`/${i18n.language}`} className="navbar-item navbarHome">
+                        <Link to={`/${i18n.language}`} className="navbar-item">
 
                             <span className="eadHightlight">
 
@@ -103,7 +103,7 @@ import i18n from "i18next";
 
                     <div id="navbarBasicExample" className="navbar-menu">
 
-                        <div className="navbar-start navbarContentLinks">
+                        <div className="navbar-start">
                             
                             {/*
 
@@ -178,7 +178,7 @@ import i18n from "i18next";
 
                             */}
 
-                            <a href="https://panel.eadojo.com/login" className="button loginButton">
+                            <a href="https://panel.eadojo.com/login" className="button">
 
                                 {t('TEXT_AUTH_LOGIN')}
 

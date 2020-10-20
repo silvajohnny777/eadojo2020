@@ -11,28 +11,28 @@ import { withNamespaces } from 'react-i18next';
                 courseSteps: [
                     {
                         title: 'WEBSITE_TEXT_CREATE_ACCOUNT_3_MIN',
-                        image: 'WEBSITE_TEXT_CREATE_ACCOUNT_3_MIN_DESCRIPTION',
-                        description: 'WEBSITE_TEXT_CREATE_ACCOUNT_3_MIN_ICON',
+                        description: 'WEBSITE_TEXT_CREATE_ACCOUNT_3_MIN_DESCRIPTION',
+                        icon: 'https://img.icons8.com/cotton/2x/create-new--v3.png',
                     },
                     {
                         title: 'WEBSITE_TEXT_CREATE_NEW_COURSE',
-                        image: 'WEBSITE_TEXT_CREATE_NEW_COURSE_DESCRIPTION',
-                        description: 'WEBSITE_TEXT_CREATE_NEW_COURSE_ICON',
+                        description: 'WEBSITE_TEXT_CREATE_NEW_COURSE_DESCRIPTION',
+                        icon: 'https://img.icons8.com/cotton/2x/plus--v3.png',
                     },
                     {
                         title: 'WEBSITE_TEXT_CREATE_COURSE_NAME_DESCRIPTION',
-                        image: 'WEBSITE_TEXT_CREATE_COURSE_NAME_DESCRIPTION_DESCRIPTION',
-                        description: 'WEBSITE_TEXT_CREATE_COURSE_NAME_DESCRIPTION_ICON',
+                        description: 'WEBSITE_TEXT_CREATE_COURSE_NAME_DESCRIPTION_DESCRIPTION',
+                        icon: 'https://img.icons8.com/doodle/2x/tag-window.png',
                     },
                     {
                         title: 'WEBSITE_TEXT_CREATE_WRITE_COURSE_CONTENT',
-                        image: 'WEBSITE_TEXT_CREATE_WRITE_COURSE_CONTENT_DESCRIPTION',
-                        description: 'WEBSITE_TEXT_CREATE_WRITE_COURSE_CONTENT_ICON',
+                        description: 'WEBSITE_TEXT_CREATE_WRITE_COURSE_CONTENT_DESCRIPTION',
+                        icon: 'https://img.icons8.com/ios-filled/2x/table-of-content.png',
                     },
                     {
                         title: 'WEBSITE_TEXT_CREATE_SHARE_WITH_THE_WORLD',
-                        image: 'WEBSITE_TEXT_CREATE_SHARE_WITH_THE_WORLD_DESCRIPTION',
-                        description: 'WEBSITE_TEXT_CREATE_SHARE_WITH_THE_WORLD_ICON',
+                        description: 'WEBSITE_TEXT_CREATE_SHARE_WITH_THE_WORLD_DESCRIPTION',
+                        icon: 'https://img.icons8.com/cotton/2x/cloud-share-symbol.png',
                     },
                 ]
             }
@@ -45,57 +45,68 @@ import { withNamespaces } from 'react-i18next';
 
             return (
 
-                <div className="container thirdSectionContainer">
+                <div className="container is-fluid creation">
 
-                    <div className="thirdSectionContent">
+                    <div className="content mt-6">
 
-                    <h1 className="title thirdSectionContentTitle">
-                        
-                        {t('TEXT_WEBSITE_CREATING_A_COURSE_IS_SIMPLE')}
-                        
-                    </h1>
+                        <h2 className="subtitle has-text-centered">
+                            
+                            {t('TEXT_WEBSITE_CREATING_A_COURSE_IS_SIMPLE')}
+                            
+                        </h2>
 
-                    {
+                        <div className="columns is-mobile is-vcentered is-centered">
 
-                        this.state.courseSteps.map((step, index) => {
+                            {
 
-                            return (
+                                this.state.courseSteps.map((step, index) => {
 
-                                <div key={index} className="columns is-mobile thirdSectionContentColumnContainer">
+                                    return (
 
-                                    <div className="column is-mobile thirdSectionContentColumnImage">
-                                        
-                                        {step.image}
+                                        <>
 
-                                    </div>
+                                        <div key={index} className="column">
 
-                                    <div className="column is-mobile thirdSectionContentColumnText">
+                                            <figure class="image is-64x64">
 
-                                        <h1 className="title is-4 thirdSectionContentTitle">
-                                            
-                                            {t(step.title)}
-                                            
-                                        </h1>
+                                                <img alt="iconImage" src={step.icon} />
 
-                                        <h1 className="subtitle is-6 thirdSectionContentTitle">
-                                            
-                                            {t(step.description)}
-                                            
-                                        </h1>
+                                            </figure>
 
-                                    </div>
-                                    
-                                </div>
+                                            <h4 className="title is-5">
+                                                
+                                                {t(step.title)}
+                                                
+                                            </h4>
 
-                            )
+                                            <p className="subtitle is-6">
+                                                
+                                                {t(step.description)}
+                                                
+                                            </p>
 
-                        })
+                                        </div>
 
-                    }
+                                        {
 
-                    <button className="button is-rounded">{t('TEXT_SIGNUP')}</button>
+                                            index < this.state.courseSteps.length - 1 &&
+
+                                                <i className="fas fa-arrow-right mr-4"></i>
+
+                                        }
+
+                                        </>
+
+                                    )
+
+                                })
+
+                            }
+
+                        </div>
                         
                     </div>
+
                 </div>
 
             )

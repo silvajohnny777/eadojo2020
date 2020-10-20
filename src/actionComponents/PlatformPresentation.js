@@ -19,7 +19,7 @@ import { withNamespaces } from 'react-i18next';
 
             this.setState({
                 language: this.props.language,
-                activeImage: 'WEBSITE_TEXT_FEATURE_ONE_IMAGE',
+                activeImage: 'https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
                 features: [
                     {
                         title: 'WEBSITE_TEXT_FEATURE_ONE',
@@ -66,63 +66,61 @@ import { withNamespaces } from 'react-i18next';
 
             return (
 
-                <div className="platformPresentationContainer">
+                <div className="container is-fluid presentation">
 
-                    <div className="platformPresentationContent">
+                    <div className="content">
 
-                        <div className="platformPresentationContentTitle">
+                        <h2 className="title is-2 has-text-centered">
 
                             {t('WEBSITE_TEXT_SECTION_THREE')}
 
-                        </div>
+                        </h2>
 
-                        <div className="platformPresentationContentDescription">
+                        <p className="subtitle is-4 has-text-centered">
 
                             {t('WEBSITE_TEXT_DESCRIPTION_SECTION_THREE')}
 
-                        </div>
+                        </p>
+                        
+                        <figure className="image is-3by3 mt-6">
 
-                        <div className="platformPresentationContentImageActive">
+                            <img className="platformImage" alt="platformImage" src={require('../images/feature_1.jpeg')} />
 
-                            {t(this.state.activeImage)}
+                            {/* {t(this.state.activeImage)} */}
+                            
+                        </figure>
 
-                        </div>
+                        <div className="container">
 
-                        <div className="platformPresentationFeatureContainer">
+                            <div className="tabs">
 
-                            {
+                                <ul>
 
-                                this.state.features.map((feature, index) => {
+                                    {
 
-                                    return (
+                                        this.state.features.map((feature, index) => {
 
-                                        <div key={index} className="featureBoxContainer">
+                                            return (
 
-                                            <div className={this.state.activeId === index ? "featureBox active" : "featureBox"} onMouseEnter={() => this.changeImage(feature.image, index)}>
+                                                <li key={index} className={this.state.activeId === index ? "is-active" : ""} onMouseEnter={() => this.changeImage(feature.image, index)}>
 
-                                                {t(feature.title)}
+                                                    
 
-                                            </div>
+                                                    {t(feature.title)}
 
-                                            {
+                                                    
 
-                                                this.state.activeId === index &&
+                                                </li>
 
-                                                    <div className="featureBoxDescription">
-                                                        
-                                                        {t(feature.description)}
+                                            )
 
-                                                    </div>
+                                        })
 
-                                            }
+                                    }
+                                
+                                </ul>
 
-                                        </div>
-
-                                    )
-
-                                })
-
-                            }
+                            </div>
 
                         </div>
 
