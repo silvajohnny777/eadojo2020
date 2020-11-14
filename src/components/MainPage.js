@@ -70,6 +70,8 @@ import OfferBusiness from '../images/business.svg'
 
         componentDidMount() {
 
+            console.log('teste', typeof window.languageWebsite, window.languageWebsite)
+
         }
 
         render() {
@@ -103,12 +105,16 @@ import OfferBusiness from '../images/business.svg'
                                 {t('WEBSITE_TEXT_YOUR_KNOWLED_TO_THE_WHOLE_WORLD')}
 
                             </p>
+
+                            {/*
                             
-                            <button className="button is-medium">
+                                <button className="button is-medium">
 
-                                <a className="firstSectionTextContentButtonText" href="http://panel.eadojo.com/register">{t('TEXT_SIGNUP')}</a>
+                                    <a className="firstSectionTextContentButtonText" href="http://panel.eadojo.com/register">{t('TEXT_SIGNUP')}</a>
 
-                            </button>
+                                </button>
+
+                            */}
 
                         </div>
 
@@ -170,6 +176,25 @@ import OfferBusiness from '../images/business.svg'
 
                     </div>
 
+                </div>
+
+                <div className="container is-fluid info">
+                    <div className="columns infoColumn is-vcentered">
+                        <div className="column is-one-quarter">
+                            <figure className="image">
+                                <img src="https://server.eadojo.com/resources/helpers/logo.png" alt="logo" />
+                            </figure>
+                        </div>
+                        <div className="column">
+                            <h1 className="title">{t('WEBSITE_TEXT_TRANSFORM_WAY_OF_TEACHING')}</h1>
+                            <h2 className="subtitle">
+                                {t('WEBSITE_TEXT_BEST_PLATFORM_INFO')}
+                            </h2>
+                            <div className="buttons">
+                                <a href="http://panel.eadojo.com/register"><button className="button">{t('TEXT_SIGNUP')}</button></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
                 {/*
@@ -437,7 +462,7 @@ import OfferBusiness from '../images/business.svg'
                         <div className="content has-text-centered">
                             <div className="columns">
                                 <div className="column">
-                                    Footer
+                                    {t('PLATFORM_NAME')}
                                 </div>
                                 <div className="column">
                                     Footer

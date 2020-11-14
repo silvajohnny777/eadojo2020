@@ -6,15 +6,43 @@ import { BrowserRouter , Route , Switch , useParams } from 'react-router-dom';
 import Cookies from 'universal-cookie';
 import PopUpCookie from './components/PopUpCookie'
 
-import { i18nStart } from './i18n'
-import i18n from "i18next";
+//import { i18nStart } from './i18n'
 
 import Navbar from './components/Navbar'
 import MainPage from './components/MainPage'
 import Companies from './components/pages/Companies'
+import Pricing from './components/pages/Pricing'
 import MainPageLoading from './actionComponents/MainPageLoading'
 
 import PageNotFound from './components/PageNotFound'
+
+
+
+import i18n from "i18next";
+import { reactI18nextModule } from "react-i18next";
+
+import { pt } from './locales/pt-BR.js';
+
+// the translations
+
+const resources = {
+  en: {
+    translation: pt
+  }
+};
+
+i18n
+  .use(reactI18nextModule) // passes i18n down to react-i18next
+  .init({
+    resources,
+    lng: "en",
+
+    keySeparator: false, // we do not use keys in form messages.welcome
+
+    interpolation: {
+      escapeValue: false // react already safes from xss
+    }
+  });
 
 class App extends React.Component {
 
@@ -34,7 +62,7 @@ class App extends React.Component {
 
   componentWillMount() {
 
-    i18nStart('')
+    //i18nStart('')
 
   }
 
@@ -104,7 +132,7 @@ class App extends React.Component {
 
     if(!i18n.isInitialized) {
 
-      i18nStart(language)
+      //i18nStart(language)
 
     }
 
@@ -115,6 +143,8 @@ class App extends React.Component {
         return <MainPage language={Arraylanguage} />
       case 'companies':
         return <Companies language={[]} />
+      case 'pricing':
+        return <Pricing />
     }
 
   }

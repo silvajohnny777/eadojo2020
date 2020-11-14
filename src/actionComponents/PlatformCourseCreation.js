@@ -63,39 +63,39 @@ import { withNamespaces } from 'react-i18next';
 
                                     return (
 
-                                        <>
+                                        <div key={index}>
 
-                                        <div key={index} className="column">
+                                            <div className="column">
 
-                                            <figure class="image is-64x64">
+                                                <figure className="image is-64x64">
 
-                                                <img alt="iconImage" src={step.icon} />
+                                                    <img alt="iconImage" src={step.icon} />
 
-                                            </figure>
+                                                </figure>
 
-                                            <h4 className="title is-5">
-                                                
-                                                {t(step.title)}
-                                                
-                                            </h4>
+                                                <h4 className="title is-5">
+                                                    
+                                                    {t(step.title)}
+                                                    
+                                                </h4>
 
-                                            <p className="subtitle is-6">
-                                                
-                                                {t(step.description)}
-                                                
-                                            </p>
+                                                <p className="subtitle is-6">
+                                                    
+                                                    {t(step.description)}
+                                                    
+                                                </p>
+
+                                            </div>
+
+                                            {
+
+                                                index < this.state.courseSteps.length - 1 &&
+
+                                                    <i className="fas fa-arrow-right mr-4"></i>
+
+                                            }
 
                                         </div>
-
-                                        {
-
-                                            index < this.state.courseSteps.length - 1 &&
-
-                                                <i className="fas fa-arrow-right mr-4"></i>
-
-                                        }
-
-                                        </>
 
                                     )
 
@@ -105,6 +105,26 @@ import { withNamespaces } from 'react-i18next';
 
                         </div>
                         
+                    </div>
+
+                    <div className="content has-text-centered mb-6">
+
+                        <a className="button testYourself is-medium" href="http://panel.eadojo.com/register">
+                            
+                            <span className="is-uppercase">
+                                
+                                {t('TEXT_WEBSITE_TRY_BY_YOURSELF')}
+                                
+                            </span>
+
+                            <span className="icon is-small">
+
+                                <i className="fas fa-arrow-right"></i>
+
+                            </span>
+
+                        </a>
+
                     </div>
 
                 </div>

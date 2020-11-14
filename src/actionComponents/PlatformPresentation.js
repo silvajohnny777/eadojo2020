@@ -1,5 +1,10 @@
 import React from 'react'
 import { withNamespaces } from 'react-i18next';
+import UsersImage from '../images/feature_1.jpeg'
+import WebsiteImage from '../images/feature_2.jpg'
+import CourseImage from '../images/feature_3.jpg'
+import EmailsImage from '../images/feature_4.jpg'
+import LogsImage from '../images/feature_5.jpg'
 
     class PlatformPresentation extends React.Component {
 
@@ -19,31 +24,31 @@ import { withNamespaces } from 'react-i18next';
 
             this.setState({
                 language: this.props.language,
-                activeImage: 'https://images.pexels.com/photos/69432/pexels-photo-69432.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260',
+                activeImage: UsersImage,
                 features: [
                     {
                         title: 'WEBSITE_TEXT_FEATURE_ONE',
-                        image: 'WEBSITE_TEXT_FEATURE_ONE_IMAGE',
+                        image: UsersImage,
                         description: 'WEBSITE_TEXT_FEATURE_ONE_DESCRIPTION',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_TWO',
-                        image: 'WEBSITE_TEXT_FEATURE_TWO_IMAGE',
+                        image: WebsiteImage,
                         description: 'WEBSITE_TEXT_FEATURE_TWO_DESCRIPTION',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_THREE',
-                        image: 'WEBSITE_TEXT_FEATURE_THREE_IMAGE',
+                        image: CourseImage,
                         description: 'WEBSITE_TEXT_FEATURE_THREE_DESCRIPTION',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_FOUR',
-                        image: 'WEBSITE_TEXT_FEATURE_FOUR_IMAGE',
+                        image: EmailsImage,
                         description: 'WEBSITE_TEXT_FEATURE_FOUR_DESCRIPTION',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_FIVE',
-                        image: 'WEBSITE_TEXT_FEATURE_FIVE_IMAGE',
+                        image: LogsImage,
                         description: 'WEBSITE_TEXT_FEATURE_FIVE_DESCRIPTION',
                     },
                 ]
@@ -84,7 +89,7 @@ import { withNamespaces } from 'react-i18next';
                         
                         <figure className="image is-3by3 mt-6">
 
-                            <img className="platformImage" alt="platformImage" src={require('../images/feature_1.jpeg')} />
+                            <img className="platformImage" alt="platformImage" src={this.state.activeImage} />
 
                             {/* {t(this.state.activeImage)} */}
                             
