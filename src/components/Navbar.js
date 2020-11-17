@@ -79,7 +79,7 @@ import i18n from "i18next";
 
                     <div className="navbar-brand">
 
-                        <Link to={`/${i18n.language}`} className="navbar-item">
+                        <Link to={`/`} className="navbar-item">
 
                             <span className="eadHightlight">
 

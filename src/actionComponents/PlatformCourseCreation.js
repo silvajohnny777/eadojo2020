@@ -63,9 +63,9 @@ import { withNamespaces } from 'react-i18next';
 
                                     return (
 
-                                        <div key={index}>
+                                        <>
 
-                                            <div className="column">
+                                            <div key={index} className="column">
 
                                                 <figure className="image is-64x64">
 
@@ -95,7 +95,7 @@ import { withNamespaces } from 'react-i18next';
 
                                             }
 
-                                        </div>
+                                        </>
 
                                     )
 

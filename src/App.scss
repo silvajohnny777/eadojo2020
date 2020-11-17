@@ -220,10 +220,34 @@ body, button, input, select, textarea :root {
 
   }
 
+  .footer {
+    display: flex;
+    justify-content: center;
+
+    .content {
+      width: 100%;
+      max-width: 1000px;
+
+      ol li{
+        list-style-type: none;
+        cursor: pointer;
+        text-decoration: none;
+        font-weight: bold;
+
+        &:hover{
+          color: var(--primary_eadojo_color);
+        }
+
+      }
+
+    }
+
+  }
+
   .hero {
     background-color: var(--primary_eadojo_color);
     //background-image: url('../src/images/man_on_computer.png');
-    background-image: url('../src/images/Artboard_1.svg');
+    //background-image: url('../src/images/Artboard_1.svg');
     background-position: right 2% bottom;
     background-repeat: no-repeat;
     //background-size: 400px 400px;
@@ -519,6 +543,24 @@ body, button, input, select, textarea :root {
         width: 500px;
         margin: 200px 0;
         text-align: center;
+
+        .button {
+          transition: .4s ease;
+          width: 150px;
+          color: #fff;
+          background-color: var(--secondary_eadojo_color);
+
+          &:hover {
+            background-color: var(--primary_eadojo_color);
+
+            .firstSectionTextContentButtonText {
+              color: #FFF;
+            }
+
+          }
+
+        }
+
       }
 
       .firstSectionTextContentTitle {

@@ -2,6 +2,7 @@ import React from 'react'
 import PlatformPresentation from '../actionComponents/PlatformPresentation'
 import PlatformCourseCreation from '../actionComponents/PlatformCourseCreation'
 import { withNamespaces } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 //import Stats from '../images/palmHands.gif'
 
@@ -70,7 +71,7 @@ import OfferBusiness from '../images/business.svg'
 
         componentDidMount() {
 
-            console.log('teste', typeof window.languageWebsite, window.languageWebsite)
+            //console.log('teste', typeof window.languageWebsite, window.languageWebsite)
 
         }
 
@@ -182,7 +183,7 @@ import OfferBusiness from '../images/business.svg'
                     <div className="columns infoColumn is-vcentered">
                         <div className="column is-one-quarter">
                             <figure className="image">
-                                <img src="https://server.eadojo.com/resources/helpers/logo.png" alt="logo" />
+                                <img src={require("../images/Artboard_1.svg")} alt="logo" />
                             </figure>
                         </div>
                         <div className="column">
@@ -390,11 +391,21 @@ import OfferBusiness from '../images/business.svg'
 
                             </p>
 
-                            <div className="button">
+                            <a className="button">
+                                
+                                <span className="is-uppercase">
 
-                                {t('WEBSITE_TEXT_FAQ')}
+                                    {t('WEBSITE_TEXT_FAQ')}
+                                    
+                                </span>
 
-                            </div>
+                                <span className="icon is-small">
+
+                                    <i className="fas fa-question-circle"></i>
+
+                                </span>
+
+                            </a>
 
                         </div>
 
@@ -461,14 +472,20 @@ import OfferBusiness from '../images/business.svg'
                     <footer className="footer">
                         <div className="content has-text-centered">
                             <div className="columns">
-                                <div className="column">
-                                    {t('PLATFORM_NAME')}
+                                <div className="column">                                            
+                                    <figure className="image is-128x50">
+                                        <img src="https://server.eadojo.com/resources/helpers/logo.png" alt="logo" />
+                                    </figure>
+                                    <ol className="has-text-left">
+                                        <li><Link to="/">{t('WEBSITE_FOOTER_HOME')}</Link></li>
+                                        <li>{t('WEBSITE_FOOTER_PRICING')}</li>
+                                    </ol>
                                 </div>
                                 <div className="column">
-                                    Footer
+                                    About us
                                 </div>
                                 <div className="column">
-                                    Footer
+                                    Social medias
                                 </div>
                                 <div className="column">
                                     Footer

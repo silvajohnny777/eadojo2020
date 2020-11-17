@@ -21,13 +21,13 @@ import PageNotFound from './components/PageNotFound'
 import i18n from "i18next";
 import { reactI18nextModule } from "react-i18next";
 
-import { pt } from './locales/pt-BR.js';
+//import { pt } from './locales/pt-BR.js';
 
 // the translations
 
 const resources = {
   en: {
-    translation: pt
+    translation: window.languageWebsite
   }
 };
 
@@ -126,7 +126,7 @@ class App extends React.Component {
 
     if(i18n.isInitialized){
 
-    console.log('pagina > ' +id + ' language > ' +language, i18n)
+    //console.log('pagina > ' +id + ' language > ' +language, i18n)
  }
     cookies.set('language', language, { path: '/' });
 
