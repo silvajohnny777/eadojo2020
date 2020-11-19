@@ -2,7 +2,7 @@ import React from 'react'
 import PlatformPresentation from '../actionComponents/PlatformPresentation'
 import PlatformCourseCreation from '../actionComponents/PlatformCourseCreation'
 import { withNamespaces } from 'react-i18next';
-import { Link } from 'react-router-dom';
+//import { Link } from 'react-router-dom';
 
 //import Stats from '../images/palmHands.gif'
 
@@ -192,7 +192,7 @@ import OfferBusiness from '../images/business.svg'
                                 {t('WEBSITE_TEXT_BEST_PLATFORM_INFO')}
                             </h2>
                             <div className="buttons">
-                                <a href="http://panel.eadojo.com/register"><button className="button">{t('TEXT_SIGNUP')}</button></a>
+                                <a href="http://panel.eadojo.com/register" rel="noopener noreferrer"><button className="button">{t('TEXT_SIGNUP')}</button></a>
                             </div>
                         </div>
                     </div>
@@ -391,7 +391,7 @@ import OfferBusiness from '../images/business.svg'
 
                             </p>
 
-                            <a className="button">
+                            <div className="button">
                                 
                                 <span className="is-uppercase">
 
@@ -405,7 +405,7 @@ import OfferBusiness from '../images/business.svg'
 
                                 </span>
 
-                            </a>
+                            </div>
 
                         </div>
 
@@ -468,31 +468,6 @@ import OfferBusiness from '../images/business.svg'
                         </p>
                         
                     </div>
-
-                    <footer className="footer">
-                        <div className="content has-text-centered">
-                            <div className="columns">
-                                <div className="column">                                            
-                                    <figure className="image is-128x50">
-                                        <img src="https://server.eadojo.com/resources/helpers/logo.png" alt="logo" />
-                                    </figure>
-                                    <ol className="has-text-left">
-                                        <li><Link to="/">{t('WEBSITE_FOOTER_HOME')}</Link></li>
-                                        <li>{t('WEBSITE_FOOTER_PRICING')}</li>
-                                    </ol>
-                                </div>
-                                <div className="column">
-                                    About us
-                                </div>
-                                <div className="column">
-                                    Social medias
-                                </div>
-                                <div className="column">
-                                    Footer
-                                </div>
-                            </div>
-                        </div>
-                    </footer>
 
                 </>
 

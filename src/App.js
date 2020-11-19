@@ -9,6 +9,7 @@ import PopUpCookie from './components/PopUpCookie'
 //import { i18nStart } from './i18n'
 
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import MainPage from './components/MainPage'
 import Companies from './components/pages/Companies'
 import Pricing from './components/pages/Pricing'
@@ -104,10 +105,12 @@ class App extends React.Component {
         <BrowserRouter basename={process.env.PUBLIC_URL}>
           <Navbar language={this.state.languages} languageId={this.state.userLanguage} />
           <Switch>
+            <Route path={"/:language?/pricing"} children={<Pricing />} />
             <Route path={"/:language"} exact children={<Child />} />
             <Route path={"/:language?/:id?"} children={<Child />} />
             <Route render={() => <PageNotFound language={this.state.languages} />} />
           </Switch>
+          <Footer />
         </BrowserRouter>
 
       </>

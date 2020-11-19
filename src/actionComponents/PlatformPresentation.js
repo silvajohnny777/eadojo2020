@@ -5,6 +5,7 @@ import WebsiteImage from '../images/feature_2.jpg'
 import CourseImage from '../images/feature_3.jpg'
 import EmailsImage from '../images/feature_4.jpg'
 import LogsImage from '../images/feature_5.jpg'
+import DashBoardImage from '../images/dashboard.jpg'
 
     class PlatformPresentation extends React.Component {
 
@@ -24,8 +25,13 @@ import LogsImage from '../images/feature_5.jpg'
 
             this.setState({
                 language: this.props.language,
-                activeImage: UsersImage,
+                activeImage: DashBoardImage,
                 features: [
+                    {
+                        title: 'WEBSITE_TEXT_FEATURE_DASHBOARD',
+                        image: DashBoardImage,
+                        description: 'WEBSITE_TEXT_FEATURE_DASHBOARD_DESCRIPTION',
+                    },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_ONE',
                         image: UsersImage,
