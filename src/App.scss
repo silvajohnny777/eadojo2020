@@ -817,6 +817,7 @@ body, button, input, select, textarea :root {
                 height: 100px;
                 background-color: #FFF;
                 display: flex;
+                flex-direction: column;
                 justify-content: center;
                 align-items: center;
                 font-weight: bold;
@@ -827,6 +828,10 @@ body, button, input, select, textarea :root {
                 transition: .4s ease;
                 cursor: pointer;
                 text-decoration: none;
+
+                .icon {
+                  margin-bottom: 10px;
+                }
 
                 &.is-active {
                   background-color: var(--primary_eadojo_color);

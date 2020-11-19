@@ -31,31 +31,37 @@ import DashBoardImage from '../images/dashboard.jpg'
                         title: 'WEBSITE_TEXT_FEATURE_DASHBOARD',
                         image: DashBoardImage,
                         description: 'WEBSITE_TEXT_FEATURE_DASHBOARD_DESCRIPTION',
+                        icon: 'fas fa-chart-line',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_ONE',
                         image: UsersImage,
                         description: 'WEBSITE_TEXT_FEATURE_ONE_DESCRIPTION',
+                        icon: 'fas fa-users',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_TWO',
                         image: WebsiteImage,
                         description: 'WEBSITE_TEXT_FEATURE_TWO_DESCRIPTION',
+                        icon: 'fas fa-globe',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_THREE',
                         image: CourseImage,
                         description: 'WEBSITE_TEXT_FEATURE_THREE_DESCRIPTION',
+                        icon: 'fas fa-book-open',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_FOUR',
                         image: EmailsImage,
                         description: 'WEBSITE_TEXT_FEATURE_FOUR_DESCRIPTION',
+                        icon: 'fas fa-envelope',
                     },
                     {
                         title: 'WEBSITE_TEXT_FEATURE_FIVE',
                         image: LogsImage,
                         description: 'WEBSITE_TEXT_FEATURE_FIVE_DESCRIPTION',
+                        icon: 'fas fa-archive',
                     },
                 ]
             })
@@ -114,12 +120,14 @@ import DashBoardImage from '../images/dashboard.jpg'
                                             return (
 
                                                 <li key={index} className={this.state.activeId === index ? "is-active" : ""} onMouseEnter={() => this.changeImage(feature.image, index)}>
+    
+                                                    <p className="icon is-small">
 
-                                                    
+                                                        <i className={feature.icon}></i>
 
-                                                    {t(feature.title)}
+                                                    </p>
 
-                                                    
+                                                    <p>{t(feature.title)}</p>
 
                                                 </li>
 
