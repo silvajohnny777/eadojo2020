@@ -28,6 +28,8 @@ import OfferBusiness from '../images/business.svg'
         }
 
         componentWillMount() {
+    
+            window.scrollTo(0, 0)
 
             this.setState({
                 language: this.props.language,
@@ -409,6 +411,25 @@ import OfferBusiness from '../images/business.svg'
 
                         </div>
 
+                    </div>
+
+                    <div className="container is-fluid info">
+                        <div className="columns infoColumn is-vcentered has-text-right">
+                            <div className="column">
+                                <h1 className="title">{t('WEBSITE_TEXT_CREATE_YOUR_ACCOUNT_RIGHT_NOW')}</h1>
+                                <h2 className="subtitle">
+                                    {t('WEBSITE_TEXT_CREATE_YOUR_ACCOUNT_RIGHT_NOW_DESCRIPTION')}
+                                </h2>
+                                <div className="buttons is-right">
+                                    <a href="http://panel.eadojo.com/register" rel="noopener noreferrer"><button className="button">{t('TEXT_SIGNUP')}</button></a>
+                                </div>
+                            </div>
+                            <div className="column is-half">
+                                <figure className="image">
+                                    <img src={require("../images/vairli_alphas-removebg-preview.png")} alt="logo" />
+                                </figure>
+                            </div>
+                        </div>
                     </div>
 
                     {/*
