@@ -125,7 +125,7 @@ import OfferBusiness from '../images/business.svg'
 
                 </section>
 
-                <div className="container secondSectionInfoBoxContainer">
+                <div className="container secondSectionInfoBoxContainer is-hidden-mobile">
 
                     <div className="box secondSectionInfoBox">
 

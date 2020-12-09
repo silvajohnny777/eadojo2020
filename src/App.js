@@ -129,7 +129,7 @@ class App extends React.Component {
 
     if(i18n.isInitialized){
 
-    //console.log('pagina > ' +id + ' language > ' +language, i18n)
+    console.log('pagina > ' +id + ' language > ' +language, i18n)
  }
     cookies.set('language', language, { path: '/' });
 
