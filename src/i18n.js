@@ -1,36 +1,26 @@
-/*
-
 import i18n from "i18next";
-import detector from "i18next-browser-languagedetector";
-import backend from "i18next-xhr-backend";
-import { reactI18nextModule } from "react-i18next";
+import { initReactI18next } from "react-i18next";
+import { pt } from './locales/pt-BR'
 
-// translations are already at
-// '../public/locales/en/translation.json'
-// which is the default for the xhr backend to load from
-
-export function i18nStart(language) {
-
-  console.log('i18n', language)
+// the translations
+// (tip move them in a JSON file and import them)
+const resources = {
+    en: {
+      translation: window.languageWebsite
+    }
+};
 
 i18n
-  .use(detector)
-  .use(backend)
-  .use(reactI18nextModule) // passes i18n down to react-i18next
+  .use(initReactI18next) // passes i18n down to react-i18next
   .init({
+    resources,
     lng: "en",
-    fallbackLng: false, // use en if detected lng is not available
-    preload: ['en'],
-    ns: ["translation"],
-    defaultNS: 'translation',
-    load: 'currentOnly',
-    backend: {
-        loadPath: 'https://server.eadojo.com/api/v1/helpers/languages/'+language
+
+    keySeparator: false, // we do not use keys in form messages.welcome
+
+    interpolation: {
+      escapeValue: false // react already safes from xss
     }
   });
 
-  
-
-}
-
-*/
+  export default i18n;
